@@ -1,20 +1,20 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { Text, Image, View, TouchableOpacity, FlatList } from 'react-native';
-import { Images } from '../../theme';
-import styles from './Styles/index';
+import * as React from 'react'
+import { useState } from 'react'
+import { Text, Image, View, TouchableOpacity, FlatList } from 'react-native'
+import { Images } from '../../theme'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
-  categoryNormalList?: any;
-  categoryCollectionList?: any;
-  categoryNormalListText?: any;
-  categoryCollectionListText?: any;
-  categoryPropartyImgStyle?: any;
-  categoryWishListText?: any;
-  categoryRightContentStyle?: any;
-  categoryList?: any;
-  onCategoryClick?: any;
+  navigation: any
+  categoryNormalList?: any
+  categoryCollectionList?: any
+  categoryNormalListText?: any
+  categoryCollectionListText?: any
+  categoryPropartyImgStyle?: any
+  categoryWishListText?: any
+  categoryRightContentStyle?: any
+  categoryList?: any
+  onCategoryClick?: any
 }
 
 function CategoryList({
@@ -26,10 +26,10 @@ function CategoryList({
   categoryWishListText,
   categoryRightContentStyle,
   categoryList,
-  onCategoryClick
+  onCategoryClick,
 }: Props) {
-  const [likeItem, setLikeItem] = useState({});
-  const [bestForYouKey, setBestForYouKey] = useState(new Date().getTime());
+  const [likeItem, setLikeItem] = useState({})
+  const [bestForYouKey, setBestForYouKey] = useState(new Date().getTime())
 
   const renderItem = ({ item }: any) => (
     <TouchableOpacity
@@ -37,7 +37,7 @@ function CategoryList({
       key={item.id}
       onPress={() => {
         if (onCategoryClick) {
-          onCategoryClick();
+          onCategoryClick()
         }
       }}>
       <TouchableOpacity disabled style={styles.categoryPropartyImgContent}>
@@ -54,10 +54,10 @@ function CategoryList({
           <TouchableOpacity
             style={styles.categoryLikeBtn}
             onPress={() => {
-              let likedObj: any = likeItem;
-              likedObj[item.id] = !likedObj[item.id];
-              setLikeItem(likedObj);
-              setBestForYouKey(new Date().getTime());
+              let likedObj: any = likeItem
+              likedObj[item.id] = !likedObj[item.id]
+              setLikeItem(likedObj)
+              setBestForYouKey(new Date().getTime())
             }}>
             <Image
               source={likeItem[item.id] ? item.activeIikeImg : item.likeImg}
@@ -81,7 +81,7 @@ function CategoryList({
             <View
               style={[
                 styles.categoryPriceRatingText,
-                styles.categoryCollectionPriceRatingTex
+                styles.categoryCollectionPriceRatingTex,
               ]}>
               <Text style={styles.categoryPriceText}>{item.priceText}</Text>
               <View style={styles.sliderRatingContainer}>
@@ -120,7 +120,7 @@ function CategoryList({
             <View
               style={[
                 styles.categoryPriceRatingText,
-                styles.categoryCollectionPriceRatingTex
+                styles.categoryCollectionPriceRatingTex,
               ]}>
               <Text style={styles.categoryPriceText}>{item.priceText}</Text>
               <View style={styles.sliderRatingContainer}>
@@ -181,7 +181,7 @@ function CategoryList({
         )}
       </View>
     </TouchableOpacity>
-  );
+  )
   return (
     <>
       {categoryNormalList && (
@@ -197,7 +197,7 @@ function CategoryList({
         <FlatList data={categoryList} renderItem={renderItem} bounces={false} />
       )}
     </>
-  );
+  )
 }
 
-export default CategoryList;
+export default CategoryList

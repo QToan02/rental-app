@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Container, Content, Header } from '../../components';
-import BookNowBtnComponent from '../../components/BookNowBtnComponent';
-import PropertyDetailComponent from '../../components/PropertyDetailComponent';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/MyRentalPropertyStyle';
+import * as React from 'react'
+import { Container, Content, Header } from '../../components'
+import BookNowBtnComponent from '../../components/BookNowBtnComponent'
+import PropertyDetailComponent from '../../components/PropertyDetailComponent'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/MyRentalPropertyStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 const HistoryPropertyScreen = ({ navigation }: Props) => {
@@ -31,6 +31,6 @@ const HistoryPropertyScreen = ({ navigation }: Props) => {
         onConfirmPayClick={() => navigation.navigate('ChoosPaymentOption')}
       />
     </Container>
-  );
-};
-export default HistoryPropertyScreen;
+  )
+}
+export default HistoryPropertyScreen

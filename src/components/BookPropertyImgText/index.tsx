@@ -1,22 +1,22 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   Image,
   View,
   Share,
   TouchableOpacity,
   Text,
-  FlatList
-} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import CommanHeading from '../CommanHeading';
-import { ratingStarImgData } from '../../assets/data';
-import { Images } from '../../theme';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/Index';
+  FlatList,
+} from 'react-native'
+import LinearGradient from 'react-native-linear-gradient'
+import CommanHeading from '../CommanHeading'
+import { ratingStarImgData } from '../../assets/data'
+import { Images } from '../../theme'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
-  props?: any;
+  navigation: any
+  props?: any
 }
 function BookPropertyImgText(props: any) {
   const onShare = async () => {
@@ -24,11 +24,11 @@ function BookPropertyImgText(props: any) {
       const result = await Share.share({
         message:
           'React Native | A framework for building native apps using React',
-      });
+      })
     } catch (error) {
       // alert(error.message);
     }
-  };
+  }
   const renderItem = ({ item }: any) => (
     <Image
       key={item.id}
@@ -36,13 +36,13 @@ function BookPropertyImgText(props: any) {
       resizeMode="contain"
       style={styles.propertyDetaileRatingStarImg}
     />
-  );
+  )
   return (
     <>
       <View
         style={[
           styles.propertyDetaileImageContent,
-          props.propertyDetaileImgContentStyle
+          props.propertyDetaileImgContentStyle,
         ]}>
         <Image
           source={Images.PropertyDetaileBgImg}
@@ -69,7 +69,7 @@ function BookPropertyImgText(props: any) {
               style={styles.propertyDetaileHeadingIconBtn}
               onPress={() => {
                 if (props.likeBtnPress) {
-                  props.likeBtnPress();
+                  props.likeBtnPress()
                 }
               }}>
               <Image
@@ -82,7 +82,7 @@ function BookPropertyImgText(props: any) {
               style={styles.propertyDetaileHeadingIconBtn}
               onPress={() => {
                 if (props.sendMsgPress) {
-                  props.sendMsgPress();
+                  props.sendMsgPress()
                 }
               }}>
               <Image
@@ -129,13 +129,13 @@ function BookPropertyImgText(props: any) {
               data={ratingStarImgData}
               renderItem={renderItem}
               numColumns={5}
-              keyExtractor={(item) => item.id}
+              keyExtractor={item => item.id}
             />
           </View>
         </View>
       </View>
     </>
-  );
+  )
 }
 
-export default BookPropertyImgText;
+export default BookPropertyImgText

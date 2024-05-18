@@ -1,16 +1,16 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   View,
   Image,
   Text,
   TouchableOpacity,
   Share,
-  FlatList
-} from 'react-native';
-import styles from './Styles/index';
+  FlatList,
+} from 'react-native'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function PopularDestionationProparty(props: any) {
@@ -18,18 +18,18 @@ function PopularDestionationProparty(props: any) {
     try {
       const result = await Share.share({
         message:
-          'React Native | A framework for building native apps using React'
-      });
+          'React Native | A framework for building native apps using React',
+      })
     } catch (error) {
       // alert(error.message);
     }
-  };
+  }
   const renderItem = ({ item }: any) => (
     <TouchableOpacity
       style={styles.popularDestionationContent}
       onPress={() => {
         if (props.onDestionationPress) {
-          props.onDestionationPress();
+          props.onDestionationPress()
         }
       }}>
       <Image
@@ -97,7 +97,7 @@ function PopularDestionationProparty(props: any) {
             style={styles.propertyDetaileHeadingIconBtn}
             onPress={() => {
               if (props.onLikePress) {
-                props.onLikePress();
+                props.onLikePress()
               }
             }}>
             <Image
@@ -110,7 +110,7 @@ function PopularDestionationProparty(props: any) {
             style={styles.propertyDetaileHeadingIconBtn}
             onPress={() => {
               if (props.onSendMsgPress) {
-                props.onSendMsgPress();
+                props.onSendMsgPress()
               }
             }}>
             <Image
@@ -131,7 +131,7 @@ function PopularDestionationProparty(props: any) {
         </View>
       </View>
     </TouchableOpacity>
-  );
+  )
   return (
     <>
       <View style={styles.popularDestionationPropartyContent}>
@@ -139,11 +139,11 @@ function PopularDestionationProparty(props: any) {
           bounces={false}
           data={props.data}
           renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+          keyExtractor={item => item.id}
         />
       </View>
     </>
-  );
+  )
 }
 
-export default PopularDestionationProparty;
+export default PopularDestionationProparty

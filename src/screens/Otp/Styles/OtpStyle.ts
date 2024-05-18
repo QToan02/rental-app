@@ -1,18 +1,18 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { isIphoneX } from '../../../libs/Utils';
-import { Colors, Fonts } from '../../../theme';
+import EStyleSheet from 'react-native-extended-stylesheet'
+import { isIphoneX } from '../../../libs/Utils'
+import { Colors, Fonts } from '../../../theme'
 
 const styles = EStyleSheet.create({
   container: {
     flex: isIphoneX() ? 1 : 0,
     paddingTop: '37rem',
     paddingBottom: '15rem',
-    paddingHorizontal: '15rem'
+    paddingHorizontal: '15rem',
   },
   signupLoginInputGroup: {
     paddingHorizontal: '25rem',
     flexDirection: 'column',
-    flex: 1
+    flex: 1,
   },
   confirmNumberText: {
     width: '250rem',
@@ -21,14 +21,14 @@ const styles = EStyleSheet.create({
     marginRight: 'auto',
     marginBottom: '20rem',
     ...Fonts.style.normalText,
-    fontSize: Fonts.size.medium
+    fontSize: Fonts.size.medium,
   },
   bottomAccountText: {
     lineHeight: '18rem',
     color: Colors.lightBlack,
     alignSelf: 'center',
     ...Fonts.style.normalText,
-    fontSize: Fonts.size.tiny
+    fontSize: Fonts.size.tiny,
   },
   loginSignupBtnText: {
     lineHeight: '18rem',
@@ -37,7 +37,7 @@ const styles = EStyleSheet.create({
     textDecorationStyle: 'solid',
     textDecorationColor: Colors.pink,
     ...Fonts.style.normalText,
-    fontSize: Fonts.size.tiny
+    fontSize: Fonts.size.tiny,
   },
   otpInputStyle: {
     width: '40rem',
@@ -48,43 +48,43 @@ const styles = EStyleSheet.create({
     color: Colors.black,
     shadowOffset: {
       width: '1rem',
-      height: '10rem'
+      height: '10rem',
     },
     shadowOpacity: 1,
     shadowRadius: 20,
     elevation: 20,
     shadowColor: Colors.blurBlack,
     ...Fonts.style.normalText,
-    fontSize: Fonts.size.medium
+    fontSize: Fonts.size.medium,
   },
   otpInputContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: '33rem'
+    marginBottom: '33rem',
   },
   bottomContinueBtn: {
     flex: 1,
-    paddingHorizontal: '25rem'
+    paddingHorizontal: '25rem',
   },
   otpContinueBtn: {
-    marginTop: 'auto'
+    marginTop: 'auto',
   },
   loaderContent: {
     width: '93rem',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: '20rem',
-    marginTop: '19rem'
+    marginTop: '19rem',
   },
   loaderDotsStyle: {
     color: Colors.pink,
     fontSize: '75rem',
     letterSpacing: '-12rem',
-    lineHeight: '30rem'
+    lineHeight: '30rem',
   },
   logoHeadingStyle: {
-    marginHorizontal: '-25rem'
-  }
-});
+    marginHorizontal: '-25rem',
+  },
+})
 
-export default styles;
+export default styles

@@ -8,7 +8,9 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "fixcode": "eslint --fix --ext .js,.jsx,.ts,.tsx ./src"
+    "fixcode": "eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
+    "format:check": "prettier --check ./src",
+    "format:write": "prettier --write --ext .js,.jsx,.mjs,.cjs,.ts,.tsx,.json ./src"
   },
   "dependencies": {
     "@gorhom/animated-tabbar": "^2.1.2",

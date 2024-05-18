@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Text } from 'react-native';
-import styles from './Styles/index';
+import * as React from 'react'
+import { Text } from 'react-native'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function CommanText(props: any) {
@@ -13,7 +13,7 @@ function CommanText(props: any) {
         {props.commanText}
       </Text>
     </>
-  );
+  )
 }
 
-export default CommanText;
+export default CommanText

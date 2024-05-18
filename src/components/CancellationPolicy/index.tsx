@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import CommanHeading from '../CommanHeading';
-import CancellationPolicySwitch from '../CancellationPolicySwitch';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/Index';
+import * as React from 'react'
+import { View, Text, TouchableOpacity } from 'react-native'
+import CommanHeading from '../CommanHeading'
+import CancellationPolicySwitch from '../CancellationPolicySwitch'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
-  Switch?: any;
-  cancellationPolicyTextContentStyle?: any;
+  navigation: any
+  Switch?: any
+  cancellationPolicyTextContentStyle?: any
 }
 
 function CancellationPolicy({
   Switch,
-  cancellationPolicyTextContentStyle
+  cancellationPolicyTextContentStyle,
 }: Props) {
   return (
     <>
@@ -29,7 +29,7 @@ function CancellationPolicy({
       <View
         style={[
           styles.cancellationPolicyTextContent,
-          cancellationPolicyTextContentStyle
+          cancellationPolicyTextContentStyle,
         ]}>
         <Text style={styles.cancellationPolicyText}>
           Cancel before 12:00 AM on Oct 15 and get a full refund, minus the
@@ -40,7 +40,7 @@ function CancellationPolicy({
         </TouchableOpacity>
       </View>
     </>
-  );
+  )
 }
 
-export default CancellationPolicy;
+export default CancellationPolicy

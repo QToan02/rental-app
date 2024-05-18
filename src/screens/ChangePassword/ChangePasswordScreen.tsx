@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { View } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import ResetPassword from '../../components/SignUpLogIn/ResetPassword';
-import CommanBtnScreen from '../../components/CommanBtn/index';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import styles from './Styles/ChangePasswordStyle';
-import { navigate } from '../../navigation/ReduxNavigation';
+import * as React from 'react'
+import { View } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import ResetPassword from '../../components/SignUpLogIn/ResetPassword'
+import CommanBtnScreen from '../../components/CommanBtn/index'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import styles from './Styles/ChangePasswordStyle'
+import { navigate } from '../../navigation/ReduxNavigation'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function ChangePasswordScreen({ navigation }: any) {
   return (
@@ -66,7 +66,7 @@ function ChangePasswordScreen({ navigation }: any) {
         </View>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default ChangePasswordScreen;
+export default ChangePasswordScreen

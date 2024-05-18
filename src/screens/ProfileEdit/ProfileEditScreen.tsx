@@ -1,18 +1,18 @@
-import * as React from 'react';
-import { View, Image, Text, TouchableOpacity, FlatList } from 'react-native';
-import { Container, Header, Content } from '../../components';
-import { Images } from '../../theme';
-import { profileInputList } from '../../assets/data';
-import TextInput from '../../components/SignUpLogIn/TextInput';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import DatePickerInput from '../../components/DatePickerInput';
-import ProfilePhoto from '../../components/ProfilePhoto';
-import { navigate } from '../../navigation/ReduxNavigation';
-import CommanBtnScreen from '../../components/CommanBtn';
-import styles from './Styles/ProfileEditStyle';
+import * as React from 'react'
+import { View, Image, Text, TouchableOpacity, FlatList } from 'react-native'
+import { Container, Header, Content } from '../../components'
+import { Images } from '../../theme'
+import { profileInputList } from '../../assets/data'
+import TextInput from '../../components/SignUpLogIn/TextInput'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import DatePickerInput from '../../components/DatePickerInput'
+import ProfilePhoto from '../../components/ProfilePhoto'
+import { navigate } from '../../navigation/ReduxNavigation'
+import CommanBtnScreen from '../../components/CommanBtn'
+import styles from './Styles/ProfileEditStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function ProfileEditScreen({ navigation }: any) {
@@ -30,7 +30,7 @@ function ProfileEditScreen({ navigation }: any) {
         type={item.inputType}
       />
     </View>
-  );
+  )
   return (
     <>
       <Container>
@@ -86,7 +86,7 @@ function ProfileEditScreen({ navigation }: any) {
         </Content>
       </Container>
     </>
-  );
+  )
 }
 
-export default ProfileEditScreen;
+export default ProfileEditScreen

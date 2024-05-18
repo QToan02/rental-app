@@ -1,5 +1,5 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { Colors, Fonts } from '../../../theme';
+import EStyleSheet from 'react-native-extended-stylesheet'
+import { Colors, Fonts } from '../../../theme'
 
 const styles = EStyleSheet.create({
   paymentOptionListBtn: {
@@ -7,18 +7,18 @@ const styles = EStyleSheet.create({
     paddingBottom: '15rem',
     borderBottomWidth: '2rem',
     borderColor: Colors.gray,
-    marginBottom: '23rem'
+    marginBottom: '23rem',
   },
   paymentOptionCardImg: {
     width: '20rem',
     height: '15rem',
-    marginRight: '17.5rem'
+    marginRight: '17.5rem',
   },
   paymentOptionName: {
     color: Colors.black,
     lineHeight: '20rem',
     fontSize: Fonts.size.regular,
-    ...Fonts.style.normalText
+    ...Fonts.style.normalText,
   },
   paymentOptionSubName: {
     color: Colors.darkGray,
@@ -26,18 +26,18 @@ const styles = EStyleSheet.create({
     marginTop: '8rem',
     fontSize: Fonts.size.tiny,
     '@media ios': {
-      ...Fonts.style.textInputText
+      ...Fonts.style.textInputText,
     },
     '@media android': {
-      ...Fonts.style.buttonText
-    }
+      ...Fonts.style.buttonText,
+    },
   },
   paymentOptionRightArrowImg: {
     width: '9.78rem',
     height: '16rem',
     marginLeft: 'auto',
-    marginRight: '5rem'
-  }
-});
+    marginRight: '5rem',
+  },
+})
 
-export default styles;
+export default styles

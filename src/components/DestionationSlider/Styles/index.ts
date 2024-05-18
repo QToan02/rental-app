@@ -1,5 +1,5 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { Colors, Fonts } from '../../../theme';
+import EStyleSheet from 'react-native-extended-stylesheet'
+import { Colors, Fonts } from '../../../theme'
 
 const styles = EStyleSheet.create({
   paginationActiveDot: {
@@ -9,29 +9,29 @@ const styles = EStyleSheet.create({
     borderRadius: '8rem',
     borderWidth: '4rem',
     '@media ios': {
-      borderColor: Colors.lighterWhite
+      borderColor: Colors.lighterWhite,
     },
     '@media android': {
-      borderColor: Colors.lighterPink
-    }
+      borderColor: Colors.lighterPink,
+    },
   },
   paginationInActiveDot: {
     height: '8rem',
     width: '8rem',
     backgroundColor: Colors.opacityDarkGray,
     borderRadius: '8rem',
-    borderWidth: 0
+    borderWidth: 0,
   },
   sliderContainer: {
     height: '272rem',
     // width: '222rem',
     borderRadius: '20rem',
     overflow: 'hidden',
-    marginRight: '20rem'
+    marginRight: '20rem',
   },
   sliderMainImage: {
     width: '100%',
-    height: '272rem'
+    height: '272rem',
   },
   sliderTextBackground: {
     position: 'absolute',
@@ -42,14 +42,14 @@ const styles = EStyleSheet.create({
     justifyContent: 'flex-end',
     paddingVertical: '15rem',
     paddingLeft: '20rem',
-    paddingRight: '15rem'
+    paddingRight: '15rem',
   },
   sliderHeading: {
     color: Colors.white,
     lineHeight: '23rem',
     marginBottom: '6rem',
     fontSize: Fonts.size.h4,
-    ...Fonts.style.buttonText
+    ...Fonts.style.buttonText,
   },
   sliderPeregraph: {
     color: Colors.white,
@@ -57,11 +57,11 @@ const styles = EStyleSheet.create({
     paddingLeft: '5.7rem',
     fontSize: Fonts.size.tiny,
     '@media ios': {
-      ...Fonts.style.textInputText
+      ...Fonts.style.textInputText,
     },
     '@media android': {
-      ...Fonts.style.buttonText
-    }
+      ...Fonts.style.buttonText,
+    },
   },
   sliderRatingContainer: {
     position: 'absolute',
@@ -72,35 +72,35 @@ const styles = EStyleSheet.create({
     backgroundColor: Colors.lighterBgBlack,
     paddingHorizontal: '5rem',
     paddingVertical: '3.5rem',
-    borderRadius: '4rem'
+    borderRadius: '4rem',
   },
   sliderRatingStarImg: {
     width: '10rem',
-    height: '10rem'
+    height: '10rem',
   },
   sliderRatingStarText: {
     paddingLeft: '4rem',
     color: Colors.white,
     fontSize: '10rem',
     lineHeight: '15rem',
-    ...Fonts.style.textInputText
+    ...Fonts.style.textInputText,
   },
   carouselSliderContainer: {
-    height: '330rem'
+    height: '330rem',
   },
   carouselSliderPagination: {
     position: 'absolute',
     width: '100%',
-    bottom: '-13rem'
+    bottom: '-13rem',
   },
   sliderLoacationText: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   sliderLocationImg: {
     height: '15.21rem',
-    width: '12.6rem'
-  }
-});
+    width: '12.6rem',
+  },
+})
 
-export default styles;
+export default styles

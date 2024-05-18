@@ -1,15 +1,15 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { Colors, Fonts } from '../../../theme';
+import EStyleSheet from 'react-native-extended-stylesheet'
+import { Colors, Fonts } from '../../../theme'
 
 const styles = EStyleSheet.create({
   container: {
-    paddingHorizontal: '20rem'
+    paddingHorizontal: '20rem',
   },
   searchNotifyContent: {
     flexDirection: 'row',
     width: '100%',
     paddingHorizontal: '20rem',
-    paddingTop: '13rem'
+    paddingTop: '13rem',
   },
   notificationBtn: {
     width: '40rem',
@@ -19,16 +19,16 @@ const styles = EStyleSheet.create({
     borderRadius: '10rem',
     backgroundColor: Colors.white,
     borderWidth: '1rem',
-    borderColor: Colors.lightGray
+    borderColor: Colors.lightGray,
   },
   notificationIcon: {
     width: '13.59rem',
-    height: '16rem'
+    height: '16rem',
   },
   searchInputStyle: {
     width: '100% - 106rem',
     marginRight: 'auto',
-    marginBottom: '1rem'
+    marginBottom: '1rem',
   },
   penddingNotification: {
     position: 'absolute',
@@ -40,7 +40,7 @@ const styles = EStyleSheet.create({
     height: '10rem',
     width: '10rem',
     borderRadius: '7.5rem',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   indicatorStyle: {
     width: '6rem',
@@ -48,13 +48,13 @@ const styles = EStyleSheet.create({
     backgroundColor: Colors.pink,
     borderRadius: '6rem',
     left: '12%',
-    bottom: '5rem'
+    bottom: '5rem',
   },
   tabBarStyle: {
     backgroundColor: Colors.lighterGray,
     marginHorizontal: '20rem',
     elevation: 0,
-    shadowOpacity: 0
+    shadowOpacity: 0,
   },
   labelStyle: {
     color: Colors.darkGray,
@@ -62,15 +62,15 @@ const styles = EStyleSheet.create({
     margin: 0,
     textAlign: 'center',
     ...Fonts.style.buttonText,
-    fontSize: Fonts.size.medium
+    fontSize: Fonts.size.medium,
   },
   tabStyle: {
-    padding: 0
+    padding: 0,
   },
   tabViewStyle: {
     flex: 1,
-    width: '100%'
-  }
-});
+    width: '100%',
+  },
+})
 
-export default styles;
+export default styles

@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Image, View, TextInput } from 'react-native';
-import { Images, Colors } from '../../theme';
-import styles from './Styles/index';
+import * as React from 'react'
+import { Image, View, TextInput } from 'react-native'
+import { Images, Colors } from '../../theme'
+import styles from './Styles/index'
 
 export interface Props {
-  inputStyle?: any;
-  placeholder?: any;
-  type?: any;
-  searchInputStyle?: any;
-  onChangeText?: any;
+  inputStyle?: any
+  placeholder?: any
+  type?: any
+  searchInputStyle?: any
+  onChangeText?: any
 }
 
 function SearchInputScreen({
@@ -16,7 +16,7 @@ function SearchInputScreen({
   placeholder,
   type,
   searchInputStyle,
-  onChangeText
+  onChangeText,
 }: Props) {
   return (
     <>
@@ -26,9 +26,9 @@ function SearchInputScreen({
           placeholder={placeholder}
           keyboardType={type}
           placeholderTextColor={Colors.darkGray}
-          onChangeText={(text) => {
+          onChangeText={text => {
             if (onChangeText) {
-              onChangeText(text);
+              onChangeText(text)
             }
           }}
         />
@@ -39,7 +39,7 @@ function SearchInputScreen({
         />
       </View>
     </>
-  );
+  )
 }
 
-export default SearchInputScreen;
+export default SearchInputScreen

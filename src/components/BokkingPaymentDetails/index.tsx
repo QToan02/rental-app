@@ -1,21 +1,21 @@
-import * as React from 'react';
-import { Text, View, Image, TouchableOpacity } from 'react-native';
-import CommanHeading from '../CommanHeading';
-import CommanText from '../SignUpLogIn/CommanText';
-import { Images } from '../../theme';
-import styles from './Styles/Index';
-import { navigate } from '../../navigation/ReduxNavigation';
+import * as React from 'react'
+import { Text, View, Image, TouchableOpacity } from 'react-native'
+import CommanHeading from '../CommanHeading'
+import CommanText from '../SignUpLogIn/CommanText'
+import { Images } from '../../theme'
+import styles from './Styles/Index'
+import { navigate } from '../../navigation/ReduxNavigation'
 
 export interface Props {
-  navigation: any;
-  BokkingPaymentDetailsHeading?: any;
-  BokkingPaymentDetailsHeadingStyle?: any;
-  BokkingPaymentDetailsContentStyle?: any;
+  navigation: any
+  BokkingPaymentDetailsHeading?: any
+  BokkingPaymentDetailsHeadingStyle?: any
+  BokkingPaymentDetailsContentStyle?: any
 }
 function BokkingPaymentDetailsScreen({
   BokkingPaymentDetailsHeading,
   BokkingPaymentDetailsHeadingStyle,
-  BokkingPaymentDetailsContentStyle
+  BokkingPaymentDetailsContentStyle,
 }: Props) {
   return (
     <>
@@ -39,7 +39,7 @@ function BokkingPaymentDetailsScreen({
         </View>
       </View>
     </>
-  );
+  )
 }
 
-export default BokkingPaymentDetailsScreen;
+export default BokkingPaymentDetailsScreen

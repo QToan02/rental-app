@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { View, Image, Text, TouchableOpacity, FlatList } from 'react-native';
-import { Container, Header, Content } from '../../components';
-import { Images } from '../../theme';
-import { profileList } from '../../assets/data';
-import styles from './Styles/ProfileStyle';
+import * as React from 'react'
+import { View, Image, Text, TouchableOpacity, FlatList } from 'react-native'
+import { Container, Header, Content } from '../../components'
+import { Images } from '../../theme'
+import { profileList } from '../../assets/data'
+import styles from './Styles/ProfileStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function ProfileScreen({ navigation }: any) {
   const renderItem = ({ item }: any) => (
@@ -20,7 +20,7 @@ function ProfileScreen({ navigation }: any) {
         style={styles.profileLinkImg}
       />
     </TouchableOpacity>
-  );
+  )
   return (
     <>
       <Container>
@@ -63,7 +63,7 @@ function ProfileScreen({ navigation }: any) {
         </Content>
       </Container>
     </>
-  );
+  )
 }
 
-export default ProfileScreen;
+export default ProfileScreen

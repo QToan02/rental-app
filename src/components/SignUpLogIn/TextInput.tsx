@@ -1,23 +1,23 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { TextInput, Image, View, TouchableOpacity } from 'react-native';
-import dayjs from 'dayjs';
-import { Images, Colors } from '../../theme';
-import styles from './Styles/index';
+import * as React from 'react'
+import { useState } from 'react'
+import { TextInput, Image, View, TouchableOpacity } from 'react-native'
+import dayjs from 'dayjs'
+import { Images, Colors } from '../../theme'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
-  Heading?: string;
-  Peregraph?: string;
-  defaultInput?: any;
-  passwordInput?: any;
-  datePickerInput?: any;
-  inputStyle?: any;
-  placeholder?: any;
-  type?: any;
-  passwordStyle?: any;
-  onPress?: any;
-  value?: any;
+  navigation: any
+  Heading?: string
+  Peregraph?: string
+  defaultInput?: any
+  passwordInput?: any
+  datePickerInput?: any
+  inputStyle?: any
+  placeholder?: any
+  type?: any
+  passwordStyle?: any
+  onPress?: any
+  value?: any
 }
 
 function TextInputScreen({
@@ -29,9 +29,9 @@ function TextInputScreen({
   type,
   passwordStyle,
   onPress,
-  value
+  value,
 }: Props) {
-  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(true)
   // console.log('balueeee----',value?.toString())
   return (
     <>
@@ -76,13 +76,13 @@ function TextInputScreen({
           }
           onFocus={() => {
             if (onPress) {
-              onPress();
+              onPress()
             }
           }}
         />
       )}
     </>
-  );
+  )
 }
 
-export default TextInputScreen;
+export default TextInputScreen

@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Container, Header } from '../../components';
-import BookPage from '../../components/BookPage';
+import * as React from 'react'
+import { Container, Header } from '../../components'
+import BookPage from '../../components/BookPage'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function BookScreen({ navigation }: any) {
   return (
@@ -18,7 +18,7 @@ function BookScreen({ navigation }: any) {
         <BookPage />
       </Container>
     </>
-  );
+  )
 }
 
-export default BookScreen;
+export default BookScreen

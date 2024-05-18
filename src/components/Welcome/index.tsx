@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { Text, Image } from 'react-native';
-import styles from './Styles/index';
+import * as React from 'react'
+import { Text, Image } from 'react-native'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
-  Heading?: string;
-  Peregraph?: string;
+  navigation: any
+  Heading?: string
+  Peregraph?: string
 }
 
 function Welcome(props: any) {
@@ -19,7 +19,7 @@ function Welcome(props: any) {
         style={[styles.welcomeScreenImages, props.welcomeSlideImgStyle]}
       />
     </>
-  );
+  )
 }
 
-export default Welcome;
+export default Welcome

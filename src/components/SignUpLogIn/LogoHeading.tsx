@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Text, Image, View } from 'react-native';
-import { Images } from '../../theme';
-import styles from './Styles/index';
+import * as React from 'react'
+import { Text, Image, View } from 'react-native'
+import { Images } from '../../theme'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
-  Heading?: string;
-  Peregraph?: string;
+  navigation: any
+  Heading?: string
+  Peregraph?: string
 }
 
 function LogoHeading(props: any) {
@@ -17,7 +17,7 @@ function LogoHeading(props: any) {
         <Text style={styles.heading}>{props.heading}</Text>
       </View>
     </>
-  );
+  )
 }
 
-export default LogoHeading;
+export default LogoHeading

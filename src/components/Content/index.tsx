@@ -1,87 +1,87 @@
-import React from 'react';
-import { Keyboard } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import styles from './Styles';
+import React from 'react'
+import { Keyboard } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import styles from './Styles'
 
 export interface Props {
-  contentContainerStyle?: any;
-  style?: any;
-  children?: any;
-  hasHeader?: boolean;
-  extraScrollHeight?: number;
-  showsVerticalScrollIndicator?: boolean;
-  disableKBDismissScroll?: boolean;
-  enableResetScrollToCoords?: boolean;
-  keyboardShouldPersistTaps?: 'always' | 'never' | 'handled' | undefined;
-  scrollEnabled?: boolean;
-  isBottomSheet?: any;
+  contentContainerStyle?: any
+  style?: any
+  children?: any
+  hasHeader?: boolean
+  extraScrollHeight?: number
+  showsVerticalScrollIndicator?: boolean
+  disableKBDismissScroll?: boolean
+  enableResetScrollToCoords?: boolean
+  keyboardShouldPersistTaps?: 'always' | 'never' | 'handled' | undefined
+  scrollEnabled?: boolean
+  isBottomSheet?: any
 }
 
 interface State {
-  isVisible: boolean;
+  isVisible: boolean
 }
 
 class Content extends React.Component<Props, State> {
-  keyboardWillShowSub: any;
+  keyboardWillShowSub: any
 
-  keyboardWillHideSub: any;
+  keyboardWillHideSub: any
 
-  rootRef: any;
+  rootRef: any
 
-  scrollviewRef: any;
+  scrollviewRef: any
 
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
-      isVisible: true
-    };
+      isVisible: true,
+    }
   }
 
   componentDidMount = () => {
     this.keyboardWillShowSub = Keyboard.addListener(
       'keyboardDidShow',
       this.keyboardWillShow
-    );
+    )
     this.keyboardWillHideSub = Keyboard.addListener(
       'keyboardDidHide',
       this.keyboardWillHide
-    );
-  };
+    )
+  }
 
   componentWillUnmount = () => {
-    this.keyboardWillShowSub.remove();
-    this.keyboardWillHideSub.remove();
-  };
+    this.keyboardWillShowSub.remove()
+    this.keyboardWillHideSub.remove()
+  }
 
   keyboardWillShow = () => {
-    this.setState({ isVisible: false });
-  };
+    this.setState({ isVisible: false })
+  }
 
   keyboardWillHide = () => {
-    this.setState({ isVisible: true });
-  };
+    this.setState({ isVisible: true })
+  }
 
   getStyle = (): any => {
-    const { style } = this.props;
-    const tmpStyle: any = [styles.content];
+    const { style } = this.props
+    const tmpStyle: any = [styles.content]
     if (style) {
-      tmpStyle.push(style);
+      tmpStyle.push(style)
     }
-    return tmpStyle;
-  };
+    return tmpStyle
+  }
 
   getContentContainerStyle = (): any => {
-    const { contentContainerStyle, hasHeader } = this.props;
-    const style: any = [styles.contentContainerStyle];
+    const { contentContainerStyle, hasHeader } = this.props
+    const style: any = [styles.contentContainerStyle]
     if (contentContainerStyle) {
-      style.push(contentContainerStyle);
+      style.push(contentContainerStyle)
     }
     if (hasHeader === false) {
-      style.push({ paddingTop: 0 });
+      style.push({ paddingTop: 0 })
     }
-    return style;
-  };
+    return style
+  }
 
   render = () => {
     const {
@@ -91,11 +91,11 @@ class Content extends React.Component<Props, State> {
       disableKBDismissScroll,
       keyboardShouldPersistTaps,
       scrollEnabled,
-      isBottomSheet
-    } = this.props;
+      isBottomSheet,
+    } = this.props
 
-    const style = this.getStyle();
-    const contentContainerStyle = this.getContentContainerStyle();
+    const style = this.getStyle()
+    const contentContainerStyle = this.getContentContainerStyle()
     const ScrollComponent = isBottomSheet ? ScrollView : KeyboardAwareScrollView
     return (
       <ScrollComponent
@@ -108,8 +108,8 @@ class Content extends React.Component<Props, State> {
         }
         keyboardShouldPersistTaps={keyboardShouldPersistTaps || 'handled'}
         ref={(c: any) => {
-          this.scrollviewRef = c;
-          this.rootRef = c;
+          this.scrollviewRef = c
+          this.rootRef = c
         }}
         style={style}
         contentContainerStyle={contentContainerStyle}
@@ -117,8 +117,8 @@ class Content extends React.Component<Props, State> {
         showsVerticalScrollIndicator={showsVerticalScrollIndicator || false}>
         {children}
       </ScrollComponent>
-    );
-  };
+    )
+  }
 }
 
-export default Content;
+export default Content

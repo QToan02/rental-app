@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Container, Content, Header } from '../../components';
-import { Image, View, FlatList, Text, TouchableOpacity } from 'react-native';
-import CommanBtn from '../../components/CommanBtn';
-import PropertyDetailComponent from '../../components/PropertyDetailComponent';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/PopularDetailsStyle';
+import * as React from 'react'
+import { Container, Content, Header } from '../../components'
+import { Image, View, FlatList, Text, TouchableOpacity } from 'react-native'
+import CommanBtn from '../../components/CommanBtn'
+import PropertyDetailComponent from '../../components/PropertyDetailComponent'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/PopularDetailsStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 const ConfirmPayPropertyScreen = ({ navigation }: Props) => {
@@ -35,6 +35,6 @@ const ConfirmPayPropertyScreen = ({ navigation }: Props) => {
         />
       </View>
     </Container>
-  );
-};
-export default ConfirmPayPropertyScreen;
+  )
+}
+export default ConfirmPayPropertyScreen

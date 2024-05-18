@@ -1,17 +1,17 @@
-import React from 'react';
-import { SafeAreaView, StatusBar, View } from 'react-native';
+import React from 'react'
+import { SafeAreaView, StatusBar, View } from 'react-native'
 // import { colors } from '../../theme';
-import Colors from '../../theme/Colors';
-import styles from './Styles';
+import Colors from '../../theme/Colors'
+import styles from './Styles'
 
 export interface Props {
-  children?: any;
-  transparentStatusBar?: boolean;
-  statusBarColor?: any;
-  lightContent?: boolean;
-  safeAreaView?: boolean;
-  safeAreaViewHeader?: boolean;
-  conatinerStyle?: any;
+  children?: any
+  transparentStatusBar?: boolean
+  statusBarColor?: any
+  lightContent?: boolean
+  safeAreaView?: boolean
+  safeAreaViewHeader?: boolean
+  conatinerStyle?: any
 }
 
 export default class Container extends React.Component<Props> {
@@ -23,15 +23,15 @@ export default class Container extends React.Component<Props> {
       lightContent,
       safeAreaView,
       safeAreaViewHeader,
-      conatinerStyle
-    } = this.props;
+      conatinerStyle,
+    } = this.props
     const style: any = {
       flex: 0,
       alignItems: 'center',
       backgroundColor: !transparentStatusBar
         ? statusBarColor || Colors.lighterGray
-        : Colors.transparent
-    };
+        : Colors.transparent,
+    }
     return (
       <>
         <StatusBar
@@ -52,12 +52,12 @@ export default class Container extends React.Component<Props> {
           <View
             style={[
               styles.container,
-              safeAreaViewHeader === false && styles.statusBarMarginTop
+              safeAreaViewHeader === false && styles.statusBarMarginTop,
             ]}>
             {children}
           </View>
         )}
       </>
-    );
+    )
   }
 }

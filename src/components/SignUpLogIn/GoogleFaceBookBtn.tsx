@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Text, Image, TouchableOpacity } from 'react-native';
-import styles from './Styles/index';
+import * as React from 'react'
+import { Text, Image, TouchableOpacity } from 'react-native'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function GoogleFaceBookBtn(props: any) {
@@ -20,7 +20,7 @@ function GoogleFaceBookBtn(props: any) {
         </Text>
       </TouchableOpacity>
     </>
-  );
+  )
 }
 
-export default GoogleFaceBookBtn;
+export default GoogleFaceBookBtn

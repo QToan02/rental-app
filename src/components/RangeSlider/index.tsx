@@ -1,25 +1,25 @@
-import * as React from 'react';
-import { useCallback, useState } from 'react';
-import { View, Image } from 'react-native';
-import Label from './Label';
-import Rail from './Rail';
-import RailSelected from './RailSelected';
-import Thumb from './Thumb';
-import Slider from 'rn-range-slider';
-import CommanHeading from '../CommanHeading';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/Index';
-import { Images } from '../../theme';
+import * as React from 'react'
+import { useCallback, useState } from 'react'
+import { View, Image } from 'react-native'
+import Label from './Label'
+import Rail from './Rail'
+import RailSelected from './RailSelected'
+import Thumb from './Thumb'
+import Slider from 'rn-range-slider'
+import CommanHeading from '../CommanHeading'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/Index'
+import { Images } from '../../theme'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function RangeSlider() {
-  const renderThumb = useCallback(() => <Thumb />, []);
-  const renderRail = useCallback(() => <Rail />, []);
-  const renderRailSelected = useCallback(() => <RailSelected />, []);
-  const renderLabel = useCallback((value) => <Label text={value} />, []);
-  const [sliderOpenClose, setSliderOpenClose] = useState(true);
+  const renderThumb = useCallback(() => <Thumb />, [])
+  const renderRail = useCallback(() => <Rail />, [])
+  const renderRailSelected = useCallback(() => <RailSelected />, [])
+  const renderLabel = useCallback(value => <Label text={value} />, [])
+  const [sliderOpenClose, setSliderOpenClose] = useState(true)
   return (
     <>
       <CommanHeading
@@ -52,7 +52,7 @@ function RangeSlider() {
         />
       )}
     </>
-  );
+  )
 }
 
-export default RangeSlider;
+export default RangeSlider

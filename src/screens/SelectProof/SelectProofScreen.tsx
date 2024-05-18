@@ -1,27 +1,27 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { View, Text, Image } from 'react-native';
-import CountryPicker from 'react-native-country-picker-modal';
-import { CountryCode, Country } from './Styles/type';
-import { Container, Content, Header } from '../../components';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import CommanHeading from '../../components/CommanHeading';
-import RadioButton from '../../components/RadioButton';
-import CommanBtn from '../../components/CommanBtn';
-import { chooseIdData } from '../../assets/data';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/SelectProofStyle';
-import { Images } from '../../theme';
+import * as React from 'react'
+import { useState } from 'react'
+import { View, Text, Image } from 'react-native'
+import CountryPicker from 'react-native-country-picker-modal'
+import { CountryCode, Country } from './Styles/type'
+import { Container, Content, Header } from '../../components'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import CommanHeading from '../../components/CommanHeading'
+import RadioButton from '../../components/RadioButton'
+import CommanBtn from '../../components/CommanBtn'
+import { chooseIdData } from '../../assets/data'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/SelectProofStyle'
+import { Images } from '../../theme'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function SelectProofScreen({ navigation }: any) {
-  const [countryCode, setCountryCode] = useState<CountryCode>('IN');
+  const [countryCode, setCountryCode] = useState<CountryCode>('IN')
   const onSelect = (country: Country) => {
-    setCountryCode(country.cca2);
-  };
+    setCountryCode(country.cca2)
+  }
   return (
     <Container>
       <Header
@@ -53,7 +53,7 @@ function SelectProofScreen({ navigation }: any) {
               withFlagButton: false,
               withAlphaFilter: true,
               allowFontScaling: true,
-              onSelect
+              onSelect,
             }}
             containerButtonStyle={styles.countryPickerStyle}
             theme={styles.countryPickerThemeStyle}
@@ -75,7 +75,7 @@ function SelectProofScreen({ navigation }: any) {
         />
       </Content>
     </Container>
-  );
+  )
 }
 
-export default SelectProofScreen;
+export default SelectProofScreen

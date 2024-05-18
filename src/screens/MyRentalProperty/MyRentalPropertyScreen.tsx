@@ -1,24 +1,24 @@
-import * as React from 'react';
-import { View } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import CategoryList from '../../components/CategoryList';
-import { navigate } from '../../navigation/ReduxNavigation';
-import { Colors } from '../../theme';
-import { myRentalPropertyListData } from '../../assets/data';
-import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
-import styles from './Styles/MyRentalPropertyStyle';
+import * as React from 'react'
+import { View } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import CategoryList from '../../components/CategoryList'
+import { navigate } from '../../navigation/ReduxNavigation'
+import { Colors } from '../../theme'
+import { myRentalPropertyListData } from '../../assets/data'
+import { TabView, SceneMap, TabBar } from 'react-native-tab-view'
+import styles from './Styles/MyRentalPropertyStyle'
 
 export interface Props {
-  navigation: any;
-  name: string;
+  navigation: any
+  name: string
 }
 
 const MyRentalPropertyScreen = ({ navigation }: any) => {
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = React.useState(0)
   const [routes] = React.useState([
     { key: 'active', title: 'Active' },
-    { key: 'history', title: 'History' }
-  ]);
+    { key: 'history', title: 'History' },
+  ])
 
   const renderTabBar = (props: any) => (
     <TabBar
@@ -30,7 +30,7 @@ const MyRentalPropertyScreen = ({ navigation }: any) => {
       activeColor={Colors.pink}
       pressColor={Colors.transparent}
     />
-  );
+  )
 
   const HouseRoute = () => (
     <>
@@ -46,7 +46,7 @@ const MyRentalPropertyScreen = ({ navigation }: any) => {
         />
       </Content>
     </>
-  );
+  )
 
   const FlatsRoute = () => (
     <>
@@ -62,12 +62,12 @@ const MyRentalPropertyScreen = ({ navigation }: any) => {
         />
       </Content>
     </>
-  );
+  )
 
   const renderScene = SceneMap({
     active: HouseRoute,
-    history: FlatsRoute
-  });
+    history: FlatsRoute,
+  })
   return (
     <Container>
       <Header
@@ -86,6 +86,6 @@ const MyRentalPropertyScreen = ({ navigation }: any) => {
         />
       </View>
     </Container>
-  );
-};
-export default MyRentalPropertyScreen;
+  )
+}
+export default MyRentalPropertyScreen

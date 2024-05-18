@@ -1,21 +1,21 @@
-import * as React from 'react';
-import { Text, View, Image } from 'react-native';
-import CommanHeading from '../CommanHeading';
-import CommanText from '../SignUpLogIn/CommanText';
-import { Images } from '../../theme';
-import styles from './Styles/Index';
-import { navigate } from '../../navigation/ReduxNavigation';
+import * as React from 'react'
+import { Text, View, Image } from 'react-native'
+import CommanHeading from '../CommanHeading'
+import CommanText from '../SignUpLogIn/CommanText'
+import { Images } from '../../theme'
+import styles from './Styles/Index'
+import { navigate } from '../../navigation/ReduxNavigation'
 
 export interface Props {
-  navigation: any;
-  BokkingDetailsHeading?: any;
-  BokkingDetailsHeadingStyle?: any;
-  BokkingDetailsContentStyle?: any;
+  navigation: any
+  BokkingDetailsHeading?: any
+  BokkingDetailsHeadingStyle?: any
+  BokkingDetailsContentStyle?: any
 }
 function BokkingDetailsScreen({
   BokkingDetailsHeading,
   BokkingDetailsHeadingStyle,
-  BokkingDetailsContentStyle
+  BokkingDetailsContentStyle,
 }: Props) {
   return (
     <>
@@ -53,7 +53,7 @@ function BokkingDetailsScreen({
         </View>
       </View>
     </>
-  );
+  )
 }
 
-export default BokkingDetailsScreen;
+export default BokkingDetailsScreen

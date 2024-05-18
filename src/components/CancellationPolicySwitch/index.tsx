@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { View, TouchableOpacity } from 'react-native';
-import styles from './Styles/Index';
+import * as React from 'react'
+import { useState } from 'react'
+import { View, TouchableOpacity } from 'react-native'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function CancellationPolicySwitch() {
-  const [switchSet, setSwitchSet] = useState(false);
+  const [switchSet, setSwitchSet] = useState(false)
   return (
     <>
       <TouchableOpacity
@@ -30,7 +30,7 @@ function CancellationPolicySwitch() {
         />
       </TouchableOpacity>
     </>
-  );
+  )
 }
 
-export default CancellationPolicySwitch;
+export default CancellationPolicySwitch

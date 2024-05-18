@@ -1,46 +1,46 @@
-import React from 'react';
-import { View, Image, Text } from 'react-native';
-import styles from './Styles';
-import HeaderLeft from './Left';
-import HeaderLeftLoaction from './LeftLocation';
-import HeaderRight from './Right';
-import HeaderTitle from './Title';
-import TitleLogo from './TitleLogo';
-import UserLeft from './UserLeft';
-import { Images } from '../../theme';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import React from 'react'
+import { View, Image, Text } from 'react-native'
+import styles from './Styles'
+import HeaderLeft from './Left'
+import HeaderLeftLoaction from './LeftLocation'
+import HeaderRight from './Right'
+import HeaderTitle from './Title'
+import TitleLogo from './TitleLogo'
+import UserLeft from './UserLeft'
+import { Images } from '../../theme'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 export interface Props {
-  style?: any;
-  children?: any;
-  transparent?: boolean;
-  title?: string;
-  titleStyle?: any;
-  hasBackBtn?: boolean;
-  hasLocation?: boolean;
-  onBackPress?: any;
-  navigation?: any;
-  hasLogoTitle?: boolean;
-  onLocationPress?: any;
-  onProfilePress?: any;
-  clearText?: any;
-  onclearTextPress?: any;
-  filterBtn?: any;
-  onFilterBtnPress?: any;
+  style?: any
+  children?: any
+  transparent?: boolean
+  title?: string
+  titleStyle?: any
+  hasBackBtn?: boolean
+  hasLocation?: boolean
+  onBackPress?: any
+  navigation?: any
+  hasLogoTitle?: boolean
+  onLocationPress?: any
+  onProfilePress?: any
+  clearText?: any
+  onclearTextPress?: any
+  filterBtn?: any
+  onFilterBtnPress?: any
 }
 
 export default class Header extends React.PureComponent<Props> {
-  static TITLE = HeaderTitle;
+  static TITLE = HeaderTitle
 
-  static LEFT = HeaderLeft;
+  static LEFT = HeaderLeft
 
-  static LeftLocation = HeaderLeftLoaction;
+  static LeftLocation = HeaderLeftLoaction
 
-  static RIGHT = HeaderRight;
+  static RIGHT = HeaderRight
 
-  static Logo = TitleLogo;
+  static Logo = TitleLogo
 
-  static User = UserLeft;
+  static User = UserLeft
 
   render() {
     const {
@@ -58,8 +58,8 @@ export default class Header extends React.PureComponent<Props> {
       clearText,
       onclearTextPress,
       filterBtn,
-      onFilterBtnPress
-    } = this.props;
+      onFilterBtnPress,
+    } = this.props
     return (
       <>
         <View style={[styles.header, style, transparent && styles.transparent]}>
@@ -69,9 +69,9 @@ export default class Header extends React.PureComponent<Props> {
                 style={styles.backBtn}
                 onPress={() => {
                   if (onBackPress) {
-                    onBackPress();
+                    onBackPress()
                   } else if (navigation) {
-                    navigation.goBack();
+                    navigation.goBack()
                   }
                 }}>
                 <Image
@@ -87,7 +87,7 @@ export default class Header extends React.PureComponent<Props> {
             <HeaderLeftLoaction
               onLocationPress={() => {
                 if (onLocationPress) {
-                  onLocationPress();
+                  onLocationPress()
                 }
               }}
             />
@@ -122,7 +122,7 @@ export default class Header extends React.PureComponent<Props> {
               userImage
               onProfilePress={() => {
                 if (onProfilePress) {
-                  onProfilePress();
+                  onProfilePress()
                 }
               }}>
               {/* {children} */}
@@ -133,7 +133,7 @@ export default class Header extends React.PureComponent<Props> {
               clearText
               onFilterBtnPress={() => {
                 if (onclearTextPress) {
-                  onclearTextPress();
+                  onclearTextPress()
                 }
               }}
             />
@@ -143,13 +143,13 @@ export default class Header extends React.PureComponent<Props> {
               filterBtn
               onFilterBtnPress={() => {
                 if (onFilterBtnPress) {
-                  onFilterBtnPress();
+                  onFilterBtnPress()
                 }
               }}
             />
           )}
         </View>
       </>
-    );
+    )
   }
 }

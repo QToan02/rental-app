@@ -1,46 +1,43 @@
-import * as React from 'react';
-import { useState, useEffect } from 'react';
-import { TouchableOpacity, Text, View, Image, Dimensions } from 'react-native';
-import { Container, Content } from '../../components';
-import Welcome from '../../components/Welcome';
-import { Images } from '../../theme';
-import Carousel from 'react-native-snap-carousel';
-import styles from './Styles/WelcomeStyle';
-import SplashScreen from 'react-native-splash-screen';
+import * as React from 'react'
+import { useState, useEffect } from 'react'
+import { TouchableOpacity, Text, View, Image, Dimensions } from 'react-native'
+import { Container, Content } from '../../components'
+import Welcome from '../../components/Welcome'
+import { Images } from '../../theme'
+import Carousel from 'react-native-snap-carousel'
+import styles from './Styles/WelcomeStyle'
+import SplashScreen from 'react-native-splash-screen'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 const slides = [
   {
     id: 1,
     title: 'Book Your Home',
-    text:
-      'Lorem Ipsum is simply dummy text of the\nprinting and typesetting industry.',
+    text: 'Lorem Ipsum is simply dummy text of the\nprinting and typesetting industry.',
     image: Images.BackHome,
-    imageStyle: styles.welcomeSlideImg
+    imageStyle: styles.welcomeSlideImg,
   },
   {
     id: 2,
     title: 'Chat With Owner',
-    text:
-      'Lorem Ipsum is simply dummy text of the\nprinting and typesetting industry.',
+    text: 'Lorem Ipsum is simply dummy text of the\nprinting and typesetting industry.',
     image: Images.ChatWithOwner,
-    imageStyle: styles.welcomeTwoSlideImg
+    imageStyle: styles.welcomeTwoSlideImg,
   },
   {
     id: 3,
     title: 'Easy To Rent',
-    text:
-      'Lorem Ipsum is simply dummy text of the\nprinting and typesetting industry.',
+    text: 'Lorem Ipsum is simply dummy text of the\nprinting and typesetting industry.',
     image: Images.EasyToRent,
-    imageStyle: styles.welcomeSlideImg
-  }
-];
+    imageStyle: styles.welcomeSlideImg,
+  },
+]
 
 function WelcomeScreen({ navigation }: any) {
-  const windowWidth = Dimensions.get('window').width;
-  const [Index, setIndex] = useState(0);
+  const windowWidth = Dimensions.get('window').width
+  const [Index, setIndex] = useState(0)
   let renderItem = ({ item }: any) => (
     <Welcome
       key={item.id}
@@ -49,16 +46,16 @@ function WelcomeScreen({ navigation }: any) {
       image={item.image}
       welcomeSlideImgStyle={item.imageStyle}
     />
-  );
+  )
   useEffect(() => {
-    SplashScreen.hide();
-  }, []);
+    SplashScreen.hide()
+  }, [])
   return (
     <Container>
       <Content hasHeader contentContainerStyle={styles.container}>
         <Carousel
-          ref={(c) => {
-            renderItem = c;
+          ref={c => {
+            renderItem = c
           }}
           data={slides}
           renderItem={renderItem}
@@ -98,7 +95,7 @@ function WelcomeScreen({ navigation }: any) {
         </View>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default WelcomeScreen;
+export default WelcomeScreen

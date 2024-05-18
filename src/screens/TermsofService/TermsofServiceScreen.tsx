@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Text } from 'react-native';
-import { Container, Header, Content } from '../../components';
-import { navigate } from '../../navigation/ReduxNavigation';
-import CommanHeading from '../../components/CommanHeading';
-import styles from './Styles/TermsofServiceStyle';
+import * as React from 'react'
+import { Text } from 'react-native'
+import { Container, Header, Content } from '../../components'
+import { navigate } from '../../navigation/ReduxNavigation'
+import CommanHeading from '../../components/CommanHeading'
+import styles from './Styles/TermsofServiceStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function TermsofServiceScreen({ navigation }: any) {
@@ -64,7 +64,7 @@ function TermsofServiceScreen({ navigation }: any) {
         </Content>
       </Container>
     </>
-  );
+  )
 }
 
-export default TermsofServiceScreen;
+export default TermsofServiceScreen

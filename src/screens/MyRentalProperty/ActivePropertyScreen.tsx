@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Container, Content, Header } from '../../components';
-import PropertyDetailComponent from '../../components/PropertyDetailComponent';
-import styles from './Styles/MyRentalPropertyStyle';
+import * as React from 'react'
+import { Container, Content, Header } from '../../components'
+import PropertyDetailComponent from '../../components/PropertyDetailComponent'
+import styles from './Styles/MyRentalPropertyStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 const ActivePropertyScreen = ({ navigation }: Props) => {
@@ -25,6 +25,6 @@ const ActivePropertyScreen = ({ navigation }: Props) => {
         />
       </Content>
     </Container>
-  );
-};
-export default ActivePropertyScreen;
+  )
+}
+export default ActivePropertyScreen

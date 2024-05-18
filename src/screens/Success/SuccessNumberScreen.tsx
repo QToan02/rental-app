@@ -1,17 +1,17 @@
-import * as React from 'react';
-import { Text, Image, View } from 'react-native';
-import { Container, Content } from '../../components';
-import { Images } from '../../theme';
-import styles from './Styles/SuccessStyle';
+import * as React from 'react'
+import { Text, Image, View } from 'react-native'
+import { Container, Content } from '../../components'
+import { Images } from '../../theme'
+import styles from './Styles/SuccessStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function SuccessNumberScreen({ navigation }: any) {
   setTimeout(() => {
-    navigation.navigate('Login');
-  }, 2000);
+    navigation.navigate('Login')
+  }, 2000)
   return (
     <Container>
       <Content contentContainerStyle={styles.container}>
@@ -28,7 +28,7 @@ function SuccessNumberScreen({ navigation }: any) {
         </View>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default SuccessNumberScreen;
+export default SuccessNumberScreen

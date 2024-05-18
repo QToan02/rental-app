@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { View, Text, Dimensions, Image, TouchableOpacity } from 'react-native';
-import Carousel, { Pagination } from 'react-native-snap-carousel';
-import LinearGradient from 'react-native-linear-gradient';
-import { Images } from '../../theme';
-import styles from './Styles/index';
+import * as React from 'react'
+import { View, Text, Dimensions, Image, TouchableOpacity } from 'react-native'
+import Carousel, { Pagination } from 'react-native-snap-carousel'
+import LinearGradient from 'react-native-linear-gradient'
+import { Images } from '../../theme'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
-  Heading?: string;
-  Peregraph?: string;
+  navigation: any
+  Heading?: string
+  Peregraph?: string
 }
 
 const slides = [
@@ -19,7 +19,7 @@ const slides = [
     ratingText: '4.8',
     image: Images.SliderHomeHouseImageOne,
     locationImg: Images.LocationImage,
-    ratingStarImg: Images.StarActive
+    ratingStarImg: Images.StarActive,
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const slides = [
     ratingText: '4.8',
     image: Images.SliderHouseImageTwo,
     locationImg: Images.LocationImage,
-    ratingStarImg: Images.StarActive
+    ratingStarImg: Images.StarActive,
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const slides = [
     ratingText: '4.8',
     image: Images.SliderHomeHouseImageOne,
     locationImg: Images.LocationImage,
-    ratingStarImg: Images.StarActive
+    ratingStarImg: Images.StarActive,
   },
   {
     id: 4,
@@ -46,15 +46,15 @@ const slides = [
     ratingText: '4.8',
     image: Images.SliderHouseImageTwo,
     locationImg: Images.LocationImage,
-    ratingStarImg: Images.StarActive
-  }
-];
+    ratingStarImg: Images.StarActive,
+  },
+]
 
 function DestionationSlider(props: any) {
-  const windowWidth = Dimensions.get('window').width;
-  const windowHeight = Dimensions.get('window').height;
-  const [index, setIndex] = React.useState(0);
-  const isCarousel = React.useRef(null);
+  const windowWidth = Dimensions.get('window').width
+  const windowHeight = Dimensions.get('window').height
+  const [index, setIndex] = React.useState(0)
+  const isCarousel = React.useRef(null)
   let renderItem = ({ item }: any) => (
     <>
       <TouchableOpacity
@@ -89,14 +89,14 @@ function DestionationSlider(props: any) {
         </View>
       </TouchableOpacity>
     </>
-  );
+  )
 
   return (
     <>
       <View
         style={[
           styles.carouselSliderContainer,
-          props.carouselSliderContainerStyle
+          props.carouselSliderContainerStyle,
         ]}>
         <Carousel
           data={slides}
@@ -109,7 +109,7 @@ function DestionationSlider(props: any) {
           inactiveSlideScale={1}
           sliderHeight={windowHeight}
           activeSlideAlignment={'start'}
-          onSnapToItem={(i) => setIndex(i)}
+          onSnapToItem={i => setIndex(i)}
         />
         <View style={styles.carouselSliderPagination}>
           <Pagination
@@ -125,7 +125,7 @@ function DestionationSlider(props: any) {
         </View>
       </View>
     </>
-  );
+  )
 }
 
-export default DestionationSlider;
+export default DestionationSlider

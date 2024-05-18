@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { useState, useEffect } from 'react';
-import { Image, Text, View } from 'react-native';
+import * as React from 'react'
+import { useState, useEffect } from 'react'
+import { Image, Text, View } from 'react-native'
 import {
   GiftedChat,
   InputToolbar,
   Send,
   Bubble,
-  Day
-} from 'react-native-gifted-chat';
-import { Container, Header } from '../../components';
-import ReplayMsg from './ReplayMsg';
-import initialMessages from './ChatMsg';
-import styles from './Styles/ChatStyle';
-import { Colors, Fonts, Images } from '../../theme';
-import { isSameDay } from 'react-native-gifted-chat/lib/utils';
+  Day,
+} from 'react-native-gifted-chat'
+import { Container, Header } from '../../components'
+import ReplayMsg from './ReplayMsg'
+import initialMessages from './ChatMsg'
+import styles from './Styles/ChatStyle'
+import { Colors, Fonts, Images } from '../../theme'
+import { isSameDay } from 'react-native-gifted-chat/lib/utils'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 // avtar
@@ -30,7 +30,7 @@ export interface Props {
 
 export const renderBubble = (props: any) => {
   if (props.currentMessage._id === 2) {
-    return <ReplayMsg msgText={props.currentMessage.text} />;
+    return <ReplayMsg msgText={props.currentMessage.text} />
   } else {
     return (
       <Bubble
@@ -43,7 +43,7 @@ export const renderBubble = (props: any) => {
             borderTopStartRadius: 12,
             borderTopEndRadius: 12,
             borderBottomStartRadius: 0,
-            borderBottomEndRadius: 12
+            borderBottomEndRadius: 12,
           },
           right: {
             backgroundColor: Colors.pink,
@@ -52,8 +52,8 @@ export const renderBubble = (props: any) => {
             borderBottomStartRadius: 12,
             borderBottomEndRadius: 0,
             borderWidth: 1,
-            borderColor: Colors.pink
-          }
+            borderColor: Colors.pink,
+          },
         }}
         textStyle={{
           left: {
@@ -64,32 +64,32 @@ export const renderBubble = (props: any) => {
           right: {
             color: Colors.white,
             fontSize: 16,
-            ...Fonts.style.normalText
-          }
+            ...Fonts.style.normalText,
+          },
         }}
       />
-    );
+    )
   }
-};
+}
 
 function ChatDetailsScreen({ navigation }: any) {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([])
 
   useEffect(() => {
-    setMessages(initialMessages.reverse());
-  }, []);
+    setMessages(initialMessages.reverse())
+  }, [])
 
   const onSend = (newMessages = []) => {
-    setMessages((prevMessages) => GiftedChat.append(prevMessages, newMessages));
-  };
+    setMessages(prevMessages => GiftedChat.append(prevMessages, newMessages))
+  }
 
   const renderTicks = () => {
     return (
       <>
         <Text style={styles.msgSeenText}>Read</Text>
       </>
-    );
-  };
+    )
+  }
   const renderInputToolbar = (props: any) => {
     return (
       <View style={styles.chatInputBgContainerStyle}>
@@ -99,8 +99,8 @@ function ChatDetailsScreen({ navigation }: any) {
           containerStyle={styles.chatInputContainerStyle}
         />
       </View>
-    );
-  };
+    )
+  }
 
   const renderDay = (props: any) => {
     if (
@@ -117,9 +117,9 @@ function ChatDetailsScreen({ navigation }: any) {
           />
           <View style={[styles.dateRowLins, styles.dateRowRightLine]} />
         </View>
-      );
+      )
     }
-  };
+  }
   const renderSend = (props: any) => (
     <Send {...props} containerStyle={styles.chatSendBtnContainer}>
       <Image
@@ -128,7 +128,7 @@ function ChatDetailsScreen({ navigation }: any) {
         source={Images.ChatSendBtn}
       />
     </Send>
-  );
+  )
 
   return (
     <Container>
@@ -148,17 +148,17 @@ function ChatDetailsScreen({ navigation }: any) {
           showAvatarForEveryMessage={false}
           placeholder="Message..."
           user={{
-            _id: 1
+            _id: 1,
           }}
           renderBubble={renderBubble}
           renderTicks={renderTicks}
           renderDay={renderDay}
-          parsePatterns={(linkStyle) => [
+          parsePatterns={linkStyle => [
             {
               pattern: /#(\w+)/,
               style: linkStyle,
-              onPress: (tag) => console.log(`Pressed on hashtag: ${tag}`)
-            }
+              onPress: tag => console.log(`Pressed on hashtag: ${tag}`),
+            },
           ]}
           textInputStyle={styles.textInputStyle}
           renderInputToolbar={renderInputToolbar}
@@ -167,19 +167,19 @@ function ChatDetailsScreen({ navigation }: any) {
             styles.chatMsgTimeText,
             {
               left: {
-                color: Colors.darkerGray
+                color: Colors.darkerGray,
               },
               right: {
-                color: Colors.white
-              }
-            }
+                color: Colors.white,
+              },
+            },
           ]}
           dateFormat={'ddd, DD/MM'}
           onSend={onSend}
         />
       </View>
     </Container>
-  );
+  )
 }
 
-export default ChatDetailsScreen;
+export default ChatDetailsScreen

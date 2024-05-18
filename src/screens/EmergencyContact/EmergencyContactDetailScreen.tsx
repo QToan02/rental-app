@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { Text, View, FlatList, TouchableOpacity, Image } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import CommanBtn from '../../components/CommanBtn';
-import { profileInputList } from '../../assets/data';
-import TextInput from '../../components/SignUpLogIn/TextInput';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/EmergencyContactStyle';
-import { Images } from '../../theme';
+import * as React from 'react'
+import { Text, View, FlatList, TouchableOpacity, Image } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import CommanBtn from '../../components/CommanBtn'
+import { profileInputList } from '../../assets/data'
+import TextInput from '../../components/SignUpLogIn/TextInput'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/EmergencyContactStyle'
+import { Images } from '../../theme'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function EmergencyContactDetailScreen({ navigation }: any) {
@@ -28,7 +28,7 @@ function EmergencyContactDetailScreen({ navigation }: any) {
         type={item.inputType}
       />
     </View>
-  );
+  )
   return (
     <Container>
       <Header
@@ -66,7 +66,7 @@ function EmergencyContactDetailScreen({ navigation }: any) {
         <CommanBtn btnText="Save" commanBtnStyle={styles.addNowBtn} />
       </Content>
     </Container>
-  );
+  )
 }
 
-export default EmergencyContactDetailScreen;
+export default EmergencyContactDetailScreen

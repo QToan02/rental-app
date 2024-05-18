@@ -1,20 +1,20 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { View, Text } from 'react-native';
-import { Container, Content } from '../../components';
-import LogoHeading from '../../components/SignUpLogIn/LogoHeading';
-import CommanBtnScreen from '../../components/CommanBtn/index';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import OtpInputs from 'react-native-otp-inputs';
-import AnimatedEllipsis from 'react-native-animated-ellipsis';
-import styles from './Styles/OtpStyle';
+import * as React from 'react'
+import { useState } from 'react'
+import { View, Text } from 'react-native'
+import { Container, Content } from '../../components'
+import LogoHeading from '../../components/SignUpLogIn/LogoHeading'
+import CommanBtnScreen from '../../components/CommanBtn/index'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import OtpInputs from 'react-native-otp-inputs'
+import AnimatedEllipsis from 'react-native-animated-ellipsis'
+import styles from './Styles/OtpStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function OtpForgotPasswordScreen({ navigation }: any) {
-  let optConfirm = '123456';
-  const [otpInputFill, setOtpInputFill] = useState(true);
+  let optConfirm = '123456'
+  const [otpInputFill, setOtpInputFill] = useState(true)
   return (
     <Container>
       <Content hasHeader contentContainerStyle={styles.container}>
@@ -29,16 +29,16 @@ function OtpForgotPasswordScreen({ navigation }: any) {
           />
           {otpInputFill ? (
             <OtpInputs
-              handleChange={(code) => {
+              handleChange={code => {
                 if (optConfirm === code) {
-                  setOtpInputFill(false);
+                  setOtpInputFill(false)
                   setTimeout(() => {
-                    navigation.navigate('ResetPassword');
-                  }, 3000);
+                    navigation.navigate('ResetPassword')
+                  }, 3000)
                 } else {
                   setTimeout(() => {
-                    navigation.navigate('OtpForgotPassword');
-                  }, 3000);
+                    navigation.navigate('OtpForgotPassword')
+                  }, 3000)
                 }
               }}
               numberOfInputs={6}
@@ -70,7 +70,7 @@ function OtpForgotPasswordScreen({ navigation }: any) {
         </View>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default OtpForgotPasswordScreen;
+export default OtpForgotPasswordScreen

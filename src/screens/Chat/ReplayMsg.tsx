@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import styles from './Styles/ChatStyle';
+import * as React from 'react'
+import { View, Text } from 'react-native'
+import styles from './Styles/ChatStyle'
 
 function ReplayMsgScreen(props: any) {
   return (
@@ -12,7 +12,7 @@ function ReplayMsgScreen(props: any) {
       <Text style={styles.messageText}>{props.msgText}</Text>
       <Text style={styles.messageTimeText}>16.46 PM</Text>
     </View>
-  );
+  )
 }
 
-export default ReplayMsgScreen;
+export default ReplayMsgScreen

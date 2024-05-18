@@ -1,28 +1,28 @@
-import * as React from 'react';
-import { Text, View, Image } from 'react-native';
-import CommanHeading from '../CommanHeading';
-import CommanText from '../SignUpLogIn/CommanText';
-import { Images } from '../../theme';
-import styles from './Styles/Index';
-import { navigate } from '../../navigation/ReduxNavigation';
+import * as React from 'react'
+import { Text, View, Image } from 'react-native'
+import CommanHeading from '../CommanHeading'
+import CommanText from '../SignUpLogIn/CommanText'
+import { Images } from '../../theme'
+import styles from './Styles/Index'
+import { navigate } from '../../navigation/ReduxNavigation'
 
 export interface Props {
-  navigation: any;
-  BokkingPriceDetailsHeading?: any;
-  BokkingDetailsHeadingStyle?: any;
-  BokkingPriceDetailsContentStyle?: any;
+  navigation: any
+  BokkingPriceDetailsHeading?: any
+  BokkingDetailsHeadingStyle?: any
+  BokkingPriceDetailsContentStyle?: any
 }
 function BokkingPriceDetailsScreen({
   BokkingPriceDetailsHeading,
   BokkingDetailsHeadingStyle,
-  BokkingPriceDetailsContentStyle
+  BokkingPriceDetailsContentStyle,
 }: Props) {
   return (
     <>
       <View
         style={[
           styles.BokkingPriceDetailsContent,
-          BokkingPriceDetailsContentStyle
+          BokkingPriceDetailsContentStyle,
         ]}>
         <CommanHeading
           headingText
@@ -50,7 +50,7 @@ function BokkingPriceDetailsScreen({
         </View>
       </View>
     </>
-  );
+  )
 }
 
-export default BokkingPriceDetailsScreen;
+export default BokkingPriceDetailsScreen

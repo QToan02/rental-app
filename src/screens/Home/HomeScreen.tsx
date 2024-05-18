@@ -1,25 +1,25 @@
-import * as React from 'react';
-import { View, TouchableOpacity, Image } from 'react-native';
-import { Container, Header } from '../../components';
-import SearchInput from '../../components/SearchInput/Index';
-import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
-import { Images, Colors } from '../../theme';
-import HomeHouse from '../../components/HomeHouse';
-import styles from './Styles/HomeStyle';
-import { navigate } from '../../navigation/ReduxNavigation';
+import * as React from 'react'
+import { View, TouchableOpacity, Image } from 'react-native'
+import { Container, Header } from '../../components'
+import SearchInput from '../../components/SearchInput/Index'
+import { TabView, SceneMap, TabBar } from 'react-native-tab-view'
+import { Images, Colors } from '../../theme'
+import HomeHouse from '../../components/HomeHouse'
+import styles from './Styles/HomeStyle'
+import { navigate } from '../../navigation/ReduxNavigation'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function HomeScreen({ navigation }: any) {
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = React.useState(0)
   const [routes] = React.useState([
     { key: 'house', title: 'House' },
     { key: 'flats', title: 'Flats' },
     { key: 'apartment', title: 'Apartment' },
     { key: 'villa', title: 'Villa' },
-  ]);
+  ])
 
   const renderTabBar = (props: any) => (
     <TabBar
@@ -31,7 +31,7 @@ function HomeScreen({ navigation }: any) {
       activeColor={Colors.pink}
       pressColor={Colors.transparent}
     />
-  );
+  )
 
   const HouseRoute = () => (
     <HomeHouse
@@ -39,7 +39,7 @@ function HomeScreen({ navigation }: any) {
       onCategoryClick={() => navigation.navigate('PopularDetails')}
       onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
     />
-  );
+  )
 
   const FlatsRoute = () => (
     <HomeHouse
@@ -47,7 +47,7 @@ function HomeScreen({ navigation }: any) {
       onCategoryClick={() => navigation.navigate('PopularDetails')}
       onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
     />
-  );
+  )
 
   const ApartmentRoute = () => (
     <HomeHouse
@@ -55,7 +55,7 @@ function HomeScreen({ navigation }: any) {
       onCategoryClick={() => navigation.navigate('PopularDetails')}
       onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
     />
-  );
+  )
 
   const VillaRoute = () => (
     <HomeHouse
@@ -63,14 +63,14 @@ function HomeScreen({ navigation }: any) {
       onCategoryClick={() => navigation.navigate('PopularDetails')}
       onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
     />
-  );
+  )
 
   const renderScene = SceneMap({
     house: HouseRoute,
     flats: FlatsRoute,
     apartment: ApartmentRoute,
     villa: VillaRoute,
-  });
+  })
 
   return (
     <Container>
@@ -107,7 +107,7 @@ function HomeScreen({ navigation }: any) {
         />
       </View>
     </Container>
-  );
+  )
 }
 
-export default HomeScreen;
+export default HomeScreen

@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import CommanBtnScreen from '../../components/CommanBtn/index';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import styles from './Styles/IdentityVerificationStyle';
+import * as React from 'react'
+import { Text, TouchableOpacity, View } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import CommanBtnScreen from '../../components/CommanBtn/index'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import styles from './Styles/IdentityVerificationStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function IdentityVerificationScreen({ navigation }: any) {
@@ -38,7 +38,7 @@ function IdentityVerificationScreen({ navigation }: any) {
         </TouchableOpacity>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default IdentityVerificationScreen;
+export default IdentityVerificationScreen

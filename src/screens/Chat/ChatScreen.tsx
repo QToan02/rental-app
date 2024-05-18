@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Image, Text, TouchableOpacity, View, FlatList } from 'react-native';
-import SearchInput from '../../components/SearchInput/Index';
-import { Container, Content, Header } from '../../components';
-import { chatUserIdData } from '../../assets/data';
-import styles from './Styles/ChatStyle';
+import * as React from 'react'
+import { Image, Text, TouchableOpacity, View, FlatList } from 'react-native'
+import SearchInput from '../../components/SearchInput/Index'
+import { Container, Content, Header } from '../../components'
+import { chatUserIdData } from '../../assets/data'
+import styles from './Styles/ChatStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function ChatScreen({ navigation }: any) {
@@ -24,7 +24,7 @@ function ChatScreen({ navigation }: any) {
         <Text style={styles.chatListLinkLastSeenText}>{item.userLastSeen}</Text>
       </View>
     </TouchableOpacity>
-  );
+  )
   return (
     <Container>
       <Header
@@ -42,11 +42,11 @@ function ChatScreen({ navigation }: any) {
           bounces={false}
           data={chatUserIdData}
           renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+          keyExtractor={item => item.id}
         />
       </Content>
     </Container>
-  );
+  )
 }
 
-export default ChatScreen;
+export default ChatScreen

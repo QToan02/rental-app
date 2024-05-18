@@ -1,28 +1,28 @@
-import React from 'react';
-import { Text, Image } from 'react-native';
-import moment from 'moment';
-import DateRangePicker from 'react-native-daterange-picker';
-import { Images } from '../../theme';
-import styles from './Styles/index';
+import React from 'react'
+import { Text, Image } from 'react-native'
+import moment from 'moment'
+import DateRangePicker from 'react-native-daterange-picker'
+import { Images } from '../../theme'
+import styles from './Styles/index'
 
 export default class Date extends React.Component {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       startDate: moment(),
       endDate: moment(),
-      displayedDate: moment()
-    };
+      displayedDate: moment(),
+    }
   }
 
   setDates = (dates: any) => {
     this.setState({
-      ...dates
-    });
-  };
+      ...dates,
+    })
+  }
 
   render() {
-    const { startDate, endDate, displayedDate }: any = this.state;
+    const { startDate, endDate, displayedDate }: any = this.state
     return (
       <DateRangePicker
         range
@@ -57,6 +57,6 @@ export default class Date extends React.Component {
         onChange={this.setDates}>
         <Text style={styles.pickerOpenText} />
       </DateRangePicker>
-    );
+    )
   }
 }

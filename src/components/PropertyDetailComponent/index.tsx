@@ -1,16 +1,16 @@
-import * as React from 'react';
-import BookPropertyImgText from '../BookPropertyImgText';
-import FacilitiesRules from '../FacilitiesRules';
-import BokkingDetails from '../BokkingDetails';
-import BokkingPriceDetails from '../BokkingPriceDetails';
-import BokkingPaymentDetails from '../BokkingPaymentDetails';
-import CancellationPolicy from '../CancellationPolicy';
-import { facilitiesList } from '../../assets/data';
-import styles from './Styles/index';
-import { navigate } from '../../navigation/ReduxNavigation';
+import * as React from 'react'
+import BookPropertyImgText from '../BookPropertyImgText'
+import FacilitiesRules from '../FacilitiesRules'
+import BokkingDetails from '../BokkingDetails'
+import BokkingPriceDetails from '../BokkingPriceDetails'
+import BokkingPaymentDetails from '../BokkingPaymentDetails'
+import CancellationPolicy from '../CancellationPolicy'
+import { facilitiesList } from '../../assets/data'
+import styles from './Styles/index'
+import { navigate } from '../../navigation/ReduxNavigation'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function PropertyDetailComponent(props: any) {
@@ -21,12 +21,12 @@ function PropertyDetailComponent(props: any) {
         locationText
         likeBtnPress={() => {
           if (props.likeBtnPress) {
-            props.likeBtnPress();
+            props.likeBtnPress()
           }
         }}
         sendMsgPress={() => {
           if (props.sendMsgPress) {
-            props.sendMsgPress();
+            props.sendMsgPress()
           }
         }}
       />
@@ -60,7 +60,7 @@ function PropertyDetailComponent(props: any) {
         }
       />
     </>
-  );
+  )
 }
 
-export default PropertyDetailComponent;
+export default PropertyDetailComponent

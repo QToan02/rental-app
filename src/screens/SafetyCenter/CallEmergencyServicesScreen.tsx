@@ -1,32 +1,32 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   View,
   TouchableOpacity,
   Text,
   Image,
   Linking,
-  Platform
-} from 'react-native';
-import { Container, Content, Header } from '../../components';
-import CommanHeading from '../../components/CommanHeading';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import styles from './Styles';
-import { Images } from '../../theme';
-import { navigate } from '../../navigation/ReduxNavigation';
+  Platform,
+} from 'react-native'
+import { Container, Content, Header } from '../../components'
+import CommanHeading from '../../components/CommanHeading'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import styles from './Styles'
+import { Images } from '../../theme'
+import { navigate } from '../../navigation/ReduxNavigation'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function CallEmergencyServicesScreen({ navigation }: any) {
   const dialCall = (number: any) => {
-    let phoneNumber = '';
+    let phoneNumber = ''
     if (Platform.OS === 'android') {
-      phoneNumber = `tel:${number}`;
+      phoneNumber = `tel:${number}`
     } else {
-      phoneNumber = `telprompt:${number}`;
+      phoneNumber = `telprompt:${number}`
     }
-    Linking.openURL(phoneNumber);
-  };
+    Linking.openURL(phoneNumber)
+  }
   return (
     <Container>
       <Header
@@ -94,7 +94,7 @@ function CallEmergencyServicesScreen({ navigation }: any) {
         </Text>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default CallEmergencyServicesScreen;
+export default CallEmergencyServicesScreen

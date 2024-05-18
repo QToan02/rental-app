@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { Container, Content } from '../../components';
-import LogoHeading from '../../components/SignUpLogIn/LogoHeading';
-import TextInput from '../../components/SignUpLogIn/TextInput';
-import CommanBtnScreen from '../../components/CommanBtn/index';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import styles from './Styles/LogInStyle';
+import * as React from 'react'
+import { View, Text } from 'react-native'
+import { Container, Content } from '../../components'
+import LogoHeading from '../../components/SignUpLogIn/LogoHeading'
+import TextInput from '../../components/SignUpLogIn/TextInput'
+import CommanBtnScreen from '../../components/CommanBtn/index'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import styles from './Styles/LogInStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function ForgotPasswordScreen({ navigation }: any) {
   return (
@@ -43,7 +43,7 @@ function ForgotPasswordScreen({ navigation }: any) {
         </Text>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default ForgotPasswordScreen;
+export default ForgotPasswordScreen

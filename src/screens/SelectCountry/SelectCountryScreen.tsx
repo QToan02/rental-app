@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { View } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import { countrySelectList } from '../../assets/data';
-import RadioButton from '../../components/RadioButton';
-import SearchInput from '../../components/SearchInput/Index';
-import styles from './Styles/SelectCountryStyle';
+import * as React from 'react'
+import { View } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import { countrySelectList } from '../../assets/data'
+import RadioButton from '../../components/RadioButton'
+import SearchInput from '../../components/SearchInput/Index'
+import styles from './Styles/SelectCountryStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function SelectCountryScreen({ navigation }: any) {
@@ -29,7 +29,7 @@ function SelectCountryScreen({ navigation }: any) {
         </View>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default SelectCountryScreen;
+export default SelectCountryScreen

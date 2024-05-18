@@ -1,39 +1,39 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { TouchableOpacity, Text, View, Image, FlatList } from 'react-native';
-import { facilitiesCounterList } from '../../assets/data';
-import styles from './Styles/Index';
+import * as React from 'react'
+import { useState } from 'react'
+import { TouchableOpacity, Text, View, Image, FlatList } from 'react-native'
+import { facilitiesCounterList } from '../../assets/data'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function CounterList() {
-  const [badRoomCount, setBadRoomCount] = useState(0);
-  const [bathRoomCount, setBathRoomCount] = useState(0);
+  const [badRoomCount, setBadRoomCount] = useState(0)
+  const [bathRoomCount, setBathRoomCount] = useState(0)
 
   const handleIncrementBedRoom = () => {
-    setBadRoomCount((prevCount) => prevCount + 1);
-  };
+    setBadRoomCount(prevCount => prevCount + 1)
+  }
 
   const handleDecrementBedRoom = () => {
     if (badRoomCount <= 0) {
-      setBadRoomCount(0);
+      setBadRoomCount(0)
     } else if (badRoomCount >= 0) {
-      setBadRoomCount((prevCount) => prevCount - 1);
+      setBadRoomCount(prevCount => prevCount - 1)
     }
-  };
+  }
 
   const handleIncrementBathRoom = () => {
-    setBathRoomCount((prevCount) => prevCount + 1);
-  };
+    setBathRoomCount(prevCount => prevCount + 1)
+  }
 
   const handleDecrementBathRoom = () => {
     if (bathRoomCount <= 0) {
-      setBathRoomCount(0);
+      setBathRoomCount(0)
     } else if (bathRoomCount >= 0) {
-      setBathRoomCount((prevCount) => prevCount - 1);
+      setBathRoomCount(prevCount => prevCount - 1)
     }
-  };
+  }
 
   const renderItem = ({ item, index }: any) => (
     <View style={styles.facilitiCounterRow}>
@@ -42,10 +42,10 @@ function CounterList() {
         <TouchableOpacity
           onPress={() => {
             if (index === 0) {
-              handleDecrementBedRoom();
+              handleDecrementBedRoom()
             }
             if (index === 1) {
-              handleDecrementBathRoom();
+              handleDecrementBathRoom()
             }
           }}>
           <Image
@@ -60,10 +60,10 @@ function CounterList() {
         <TouchableOpacity
           onPress={() => {
             if (index === 0) {
-              handleIncrementBedRoom();
+              handleIncrementBedRoom()
             }
             if (index === 1) {
-              handleIncrementBathRoom();
+              handleIncrementBathRoom()
             }
           }}>
           <Image
@@ -74,14 +74,14 @@ function CounterList() {
         </TouchableOpacity>
       </View>
     </View>
-  );
+  )
   return (
     <>
       <View style={styles.facilitiCounterContainer}>
         <FlatList data={facilitiesCounterList} renderItem={renderItem} />
       </View>
     </>
-  );
+  )
 }
 
-export default CounterList;
+export default CounterList

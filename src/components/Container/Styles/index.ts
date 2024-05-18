@@ -1,6 +1,6 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { StatusBar } from 'react-native';
-import { Colors } from '../../../theme';
+import EStyleSheet from 'react-native-extended-stylesheet'
+import { StatusBar } from 'react-native'
+import { Colors } from '../../../theme'
 
 const styles = EStyleSheet.create({
   safeViewcontainer: {
@@ -8,16 +8,16 @@ const styles = EStyleSheet.create({
     alignItems: 'center',
     backgroundColor: Colors.lighterGray,
     '@media android': {
-      marginTop: StatusBar.currentHeight
-    }
+      marginTop: StatusBar.currentHeight,
+    },
   },
   container: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   statusBarMarginTop: {
-    marginTop: StatusBar.currentHeight
-  }
-});
+    marginTop: StatusBar.currentHeight,
+  },
+})
 
-export default styles;
+export default styles

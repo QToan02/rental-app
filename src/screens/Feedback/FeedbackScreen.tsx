@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Image, Text, TouchableOpacity } from 'react-native';
-import { Container, Header, Content } from '../../components';
-import { navigate } from '../../navigation/ReduxNavigation';
-import CommanHeading from '../../components/CommanHeading';
-import styles from './Styles/FeedbackStyle';
-import { Images } from '../../theme';
+import * as React from 'react'
+import { Image, Text, TouchableOpacity } from 'react-native'
+import { Container, Header, Content } from '../../components'
+import { navigate } from '../../navigation/ReduxNavigation'
+import CommanHeading from '../../components/CommanHeading'
+import styles from './Styles/FeedbackStyle'
+import { Images } from '../../theme'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function FeedbackScreen({ navigation }: any) {
@@ -66,7 +66,7 @@ function FeedbackScreen({ navigation }: any) {
         </Content>
       </Container>
     </>
-  );
+  )
 }
 
-export default FeedbackScreen;
+export default FeedbackScreen

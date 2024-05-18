@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
-import { Container, Content } from '../../components';
-import LogoHeading from '../../components/SignUpLogIn/LogoHeading';
-import TextInput from '../../components/SignUpLogIn/TextInput';
-import CommanBtnScreen from '../../components/CommanBtn/index';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import GoogleFaceBookBtn from '../../components/SignUpLogIn/GoogleFaceBookBtn';
-import styles from './Styles/SignupStyle';
-import { Images } from '../../theme';
+import * as React from 'react'
+import { View, TouchableOpacity, Text } from 'react-native'
+import { Container, Content } from '../../components'
+import LogoHeading from '../../components/SignUpLogIn/LogoHeading'
+import TextInput from '../../components/SignUpLogIn/TextInput'
+import CommanBtnScreen from '../../components/CommanBtn/index'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import GoogleFaceBookBtn from '../../components/SignUpLogIn/GoogleFaceBookBtn'
+import styles from './Styles/SignupStyle'
+import { Images } from '../../theme'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function SignupScreen({ navigation }: any) {
   return (
@@ -69,7 +69,7 @@ function SignupScreen({ navigation }: any) {
         </View>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default SignupScreen;
+export default SignupScreen

@@ -1,20 +1,20 @@
-import * as React from 'react';
-import { TouchableOpacity, Text, View, Image } from 'react-native';
-import { Images } from '../../theme';
-import styles from './Styles/Index';
+import * as React from 'react'
+import { TouchableOpacity, Text, View, Image } from 'react-native'
+import { Images } from '../../theme'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
-  headingText?: any;
-  headingBtn?: any;
-  heading?: any;
-  moreBtn?: any;
-  morBtnStyle?: any;
-  commanHeadingContainerStyle?: any;
-  onMoreBtnPress?: any;
-  headingCollapseBtn?: any;
-  arrowIcon?: any;
-  arrowIconStyle?: any;
+  navigation: any
+  headingText?: any
+  headingBtn?: any
+  heading?: any
+  moreBtn?: any
+  morBtnStyle?: any
+  commanHeadingContainerStyle?: any
+  onMoreBtnPress?: any
+  headingCollapseBtn?: any
+  arrowIcon?: any
+  arrowIconStyle?: any
 }
 function CommanHeadingScreen({
   headingText,
@@ -26,7 +26,7 @@ function CommanHeadingScreen({
   onMoreBtnPress,
   headingCollapseBtn,
   arrowIcon,
-  arrowIconStyle
+  arrowIconStyle,
 }: Props) {
   return (
     <>
@@ -44,7 +44,7 @@ function CommanHeadingScreen({
             style={styles.viewallBtn}
             onPress={() => {
               if (onMoreBtnPress) {
-                onMoreBtnPress();
+                onMoreBtnPress()
               }
             }}>
             <Text style={[styles.morBtnText, morBtnStyle]}>{moreBtn}</Text>
@@ -64,7 +64,7 @@ function CommanHeadingScreen({
             style={styles.viewallBtn}
             onPress={() => {
               if (onMoreBtnPress) {
-                onMoreBtnPress();
+                onMoreBtnPress()
               }
             }}>
             <Image
@@ -76,7 +76,7 @@ function CommanHeadingScreen({
         </View>
       )}
     </>
-  );
+  )
 }
 
-export default CommanHeadingScreen;
+export default CommanHeadingScreen

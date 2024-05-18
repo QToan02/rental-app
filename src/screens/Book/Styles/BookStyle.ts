@@ -1,5 +1,5 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { Colors } from '../../../theme';
+import EStyleSheet from 'react-native-extended-stylesheet'
+import { Colors } from '../../../theme'
 
 const styles = EStyleSheet.create({
   // container: {
@@ -7,6 +7,6 @@ const styles = EStyleSheet.create({
   //   paddingBottom: '15rem',
   //   paddingHorizontal: '20rem'
   // }
-});
+})
 
-export default styles;
+export default styles

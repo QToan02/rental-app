@@ -1,18 +1,18 @@
-import * as React from 'react';
-import DestionationSlider from '../DestionationSlider';
-import CommanHeading from '../CommanHeading';
-import CategoryList from '../CategoryList';
-import styles from './Styles/index';
-import { navigate } from '../../navigation/ReduxNavigation';
-import { categoryListData } from '../../assets/data';
-import { Content } from '..';
+import * as React from 'react'
+import DestionationSlider from '../DestionationSlider'
+import CommanHeading from '../CommanHeading'
+import CategoryList from '../CategoryList'
+import styles from './Styles/index'
+import { navigate } from '../../navigation/ReduxNavigation'
+import { categoryListData } from '../../assets/data'
+import { Content } from '..'
 
 export interface Props {
-  navigation: any;
-  Heading?: string;
-  Peregraph?: string;
-  onCategoryClick?: any;
-  onMoreBtnPress?: any;
+  navigation: any
+  Heading?: string
+  Peregraph?: string
+  onCategoryClick?: any
+  onMoreBtnPress?: any
 }
 
 function HomeHouse({ onCategoryClick, onMoreBtnPress }: Props) {
@@ -26,7 +26,7 @@ function HomeHouse({ onCategoryClick, onMoreBtnPress }: Props) {
           navigation={navigate}
           onMoreBtnPress={() => {
             if (onMoreBtnPress) {
-              onMoreBtnPress();
+              onMoreBtnPress()
             }
           }}
         />
@@ -38,7 +38,7 @@ function HomeHouse({ onCategoryClick, onMoreBtnPress }: Props) {
           navigation={navigate}
           onMoreBtnPress={() => {
             if (onMoreBtnPress) {
-              onMoreBtnPress();
+              onMoreBtnPress()
             }
           }}
         />
@@ -49,7 +49,7 @@ function HomeHouse({ onCategoryClick, onMoreBtnPress }: Props) {
           navigation={navigate}
           onCategoryClick={() => {
             if (onCategoryClick) {
-              onCategoryClick();
+              onCategoryClick()
             }
           }}
         />
@@ -61,7 +61,7 @@ function HomeHouse({ onCategoryClick, onMoreBtnPress }: Props) {
           navigation={navigate}
           onMoreBtnPress={() => {
             if (onMoreBtnPress) {
-              onMoreBtnPress();
+              onMoreBtnPress()
             }
           }}
         />
@@ -79,7 +79,7 @@ function HomeHouse({ onCategoryClick, onMoreBtnPress }: Props) {
           navigation={navigate}
           onMoreBtnPress={() => {
             if (onMoreBtnPress) {
-              onMoreBtnPress();
+              onMoreBtnPress()
             }
           }}
         />
@@ -90,13 +90,13 @@ function HomeHouse({ onCategoryClick, onMoreBtnPress }: Props) {
           navigation={navigate}
           onCategoryClick={() => {
             if (onCategoryClick) {
-              onCategoryClick();
+              onCategoryClick()
             }
           }}
         />
       </Content>
     </>
-  );
+  )
 }
 
-export default HomeHouse;
+export default HomeHouse

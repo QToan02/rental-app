@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { Text, View } from 'react-native';
-import CommanBtn from '../CommanBtn';
-import styles from './Styles/Index';
+import * as React from 'react'
+import { useState } from 'react'
+import { Text, View } from 'react-native'
+import CommanBtn from '../CommanBtn'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
-  onConfirmPayClick?: any;
-  bookNowBtnContentStyle?: any;
+  navigation: any
+  onConfirmPayClick?: any
+  bookNowBtnContentStyle?: any
 }
 function BookNowBtnComponent({
   onConfirmPayClick,
-  bookNowBtnContentStyle
+  bookNowBtnContentStyle,
 }: Props) {
-  const [bookBtnSet, setBookBtnSet] = useState(true);
+  const [bookBtnSet, setBookBtnSet] = useState(true)
   return (
     <>
       <View style={[styles.bookNowBtnContent, bookNowBtnContentStyle]}>
@@ -35,14 +35,14 @@ function BookNowBtnComponent({
             commanBtnStyle={styles.confirmPayBtn}
             onBtnPress={() => {
               if (onConfirmPayClick) {
-                onConfirmPayClick();
+                onConfirmPayClick()
               }
             }}
           />
         )}
       </View>
     </>
-  );
+  )
 }
 
-export default BookNowBtnComponent;
+export default BookNowBtnComponent

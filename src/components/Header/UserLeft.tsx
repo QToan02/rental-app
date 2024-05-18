@@ -1,17 +1,17 @@
-import React from 'react';
-import { View } from 'react-native';
-import styles from './Styles';
+import React from 'react'
+import { View } from 'react-native'
+import styles from './Styles'
 
 export interface Props {
-  style?: any;
-  children?: any;
+  style?: any
+  children?: any
 }
 
 class UserLeft extends React.PureComponent<Props> {
   render() {
-    const { style, children } = this.props;
-    return <View style={[styles.left, style]}>{children}</View>;
+    const { style, children } = this.props
+    return <View style={[styles.left, style]}>{children}</View>
   }
 }
 
-export default UserLeft;
+export default UserLeft

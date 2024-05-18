@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Image, Text, TouchableOpacity, FlatList, View } from 'react-native';
-import { Container, Header, Content } from '../../components';
-import { navigate } from '../../navigation/ReduxNavigation';
-import { notificationList } from '../../assets/data';
-import CommanHeading from '../../components/CommanHeading';
-import styles from './Styles/NotificationStyle';
-import { Images } from '../../theme';
+import * as React from 'react'
+import { Image, Text, TouchableOpacity, FlatList, View } from 'react-native'
+import { Container, Header, Content } from '../../components'
+import { navigate } from '../../navigation/ReduxNavigation'
+import { notificationList } from '../../assets/data'
+import CommanHeading from '../../components/CommanHeading'
+import styles from './Styles/NotificationStyle'
+import { Images } from '../../theme'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function NotificationScreen({ navigation }: any) {
@@ -32,7 +32,7 @@ function NotificationScreen({ navigation }: any) {
         </Text>
       </View>
     </TouchableOpacity>
-  );
+  )
   return (
     <>
       <Container>
@@ -48,7 +48,7 @@ function NotificationScreen({ navigation }: any) {
         </Content>
       </Container>
     </>
-  );
+  )
 }
 
-export default NotificationScreen;
+export default NotificationScreen

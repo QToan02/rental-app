@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList } from 'react-native';
-import CommanHeading from '../CommanHeading';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/Index';
+import * as React from 'react'
+import { View, Text, Image, FlatList } from 'react-native'
+import CommanHeading from '../CommanHeading'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function FacilitiesRules(props: any) {
@@ -18,7 +18,7 @@ function FacilitiesRules(props: any) {
       />
       <Text style={styles.facilitiListText}>{item.text}</Text>
     </View>
-  );
+  )
   return (
     <>
       <View style={props.facilitiListContentStyle}>
@@ -27,7 +27,7 @@ function FacilitiesRules(props: any) {
           heading={props.FacilitiesRulesHeading}
           commanHeadingContainerStyle={[
             styles.facilitiesHeadingStyle,
-            props.facilitiesHeadingStyle
+            props.facilitiesHeadingStyle,
           ]}
           navigation={navigate}
         />
@@ -37,12 +37,12 @@ function FacilitiesRules(props: any) {
             data={props.facilitiesListData}
             renderItem={renderItem}
             numColumns={5}
-            keyExtractor={(item) => item.id}
+            keyExtractor={item => item.id}
           />
         </View>
       </View>
     </>
-  );
+  )
 }
 
-export default FacilitiesRules;
+export default FacilitiesRules

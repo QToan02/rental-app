@@ -1,16 +1,16 @@
-import React from 'react';
-import { Text, Image, TouchableOpacity } from 'react-native';
-import { Images } from '../../theme';
-import styles from './Styles';
+import React from 'react'
+import { Text, Image, TouchableOpacity } from 'react-native'
+import { Images } from '../../theme'
+import styles from './Styles'
 
 export interface Props {
-  navigation: any;
-  onProfilePress?: any;
-  userImage?: any;
-  filterBtn?: any;
-  onFilterBtnPress?: any;
-  clearText?: any;
-  onclearTextPress?: any;
+  navigation: any
+  onProfilePress?: any
+  userImage?: any
+  filterBtn?: any
+  onFilterBtnPress?: any
+  clearText?: any
+  onclearTextPress?: any
 }
 
 function HeaderRight({
@@ -19,7 +19,7 @@ function HeaderRight({
   filterBtn,
   onFilterBtnPress,
   clearText,
-  onclearTextPress
+  onclearTextPress,
 }: any) {
   return (
     <>
@@ -36,7 +36,7 @@ function HeaderRight({
           style={styles.userRightImageBtn}
           onPress={() => {
             if (onProfilePress) {
-              onProfilePress();
+              onProfilePress()
             }
           }}>
           <Image
@@ -51,7 +51,7 @@ function HeaderRight({
           style={styles.filterBtn}
           onPress={() => {
             if (onFilterBtnPress) {
-              onFilterBtnPress();
+              onFilterBtnPress()
             }
           }}>
           <Image
@@ -66,14 +66,14 @@ function HeaderRight({
           style={styles.clearTextBtn}
           onPress={() => {
             if (onclearTextPress) {
-              onclearTextPress();
+              onclearTextPress()
             }
           }}>
           <Text style={styles.clearText}>Clear</Text>
         </TouchableOpacity>
       )}
     </>
-  );
+  )
 }
 
-export default HeaderRight;
+export default HeaderRight

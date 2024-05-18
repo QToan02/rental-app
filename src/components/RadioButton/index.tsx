@@ -1,10 +1,10 @@
-import * as React from 'react';
-import RadioButtonRN from 'radio-buttons-react-native';
-import { Colors } from '../../theme';
-import styles from './Styles/Index';
+import * as React from 'react'
+import RadioButtonRN from 'radio-buttons-react-native'
+import { Colors } from '../../theme'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function RadioButton(props: any) {
@@ -19,7 +19,7 @@ function RadioButton(props: any) {
         deactiveColor={Colors.pink}
       />
     </>
-  );
+  )
 }
 
-export default RadioButton;
+export default RadioButton

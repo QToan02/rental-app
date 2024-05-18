@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { View, TouchableOpacity, Text, Image } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import CommanHeading from '../../components/CommanHeading';
-import CommanText from '../../components/SignUpLogIn/CommanText';
-import styles from './Styles';
-import { Images } from '../../theme';
-import { navigate } from '../../navigation/ReduxNavigation';
+import * as React from 'react'
+import { View, TouchableOpacity, Text, Image } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import CommanHeading from '../../components/CommanHeading'
+import CommanText from '../../components/SignUpLogIn/CommanText'
+import styles from './Styles'
+import { Images } from '../../theme'
+import { navigate } from '../../navigation/ReduxNavigation'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function SafetyCenterScreen({ navigation }: any) {
   return (
@@ -66,7 +66,7 @@ function SafetyCenterScreen({ navigation }: any) {
         </TouchableOpacity>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default SafetyCenterScreen;
+export default SafetyCenterScreen

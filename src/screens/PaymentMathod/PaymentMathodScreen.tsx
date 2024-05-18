@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { View } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import { paymentOptionData } from '../../assets/data';
-import CommanHeading from '../../components/CommanHeading';
-import CommanBtn from '../../components/CommanBtn';
-import PaymentList from '../../components/PaymentList';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/PaymentMathodStyle';
+import * as React from 'react'
+import { View } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import { paymentOptionData } from '../../assets/data'
+import CommanHeading from '../../components/CommanHeading'
+import CommanBtn from '../../components/CommanBtn'
+import PaymentList from '../../components/PaymentList'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/PaymentMathodStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function PaymentMathodScreen({ navigation }: any) {
@@ -38,7 +38,7 @@ function PaymentMathodScreen({ navigation }: any) {
         </View>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default PaymentMathodScreen;
+export default PaymentMathodScreen

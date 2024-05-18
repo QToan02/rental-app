@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, Image } from 'react-native';
-import { Images } from '../../theme';
-import styles from './Styles/Index';
+import React from 'react'
+import { View, Image } from 'react-native'
+import { Images } from '../../theme'
+import styles from './Styles/Index'
 
 const Thumb = (props: any) => {
   return (
@@ -14,7 +14,7 @@ const Thumb = (props: any) => {
         resizeMode="contain"
       /> */}
     </View>
-  );
-};
+  )
+}
 
-export default Thumb;
+export default Thumb

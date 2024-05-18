@@ -1,32 +1,32 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { Image, View, FlatList, Text, TouchableOpacity } from 'react-native';
-import { Container, Header, Content } from '../../components';
-import { navigate } from '../../navigation/ReduxNavigation';
-import BookPropertyImgText from '../../components/BookPropertyImgText';
-import FacilitiesRules from '../../components/FacilitiesRules';
-import CommanHeading from '../../components/CommanHeading';
-import MapView, { Marker } from 'react-native-maps';
+import * as React from 'react'
+import { useState } from 'react'
+import { Image, View, FlatList, Text, TouchableOpacity } from 'react-native'
+import { Container, Header, Content } from '../../components'
+import { navigate } from '../../navigation/ReduxNavigation'
+import BookPropertyImgText from '../../components/BookPropertyImgText'
+import FacilitiesRules from '../../components/FacilitiesRules'
+import CommanHeading from '../../components/CommanHeading'
+import MapView, { Marker } from 'react-native-maps'
 import {
   facilitiesList,
   bookPropertySubImgData,
   ratingStarImgData,
   ratingCategoryListData,
-  reviewListData
-} from '../../assets/data';
-import styles from './Styles/PopularDetailsStyle';
-import { Images } from '../../theme';
-import CommanBtn from '../../components/CommanBtn';
+  reviewListData,
+} from '../../assets/data'
+import styles from './Styles/PopularDetailsStyle'
+import { Images } from '../../theme'
+import CommanBtn from '../../components/CommanBtn'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function PopularDetailsScreen({ navigation }: any) {
-  const [textShown, settextShown] = useState(-1);
+  const [textShown, settextShown] = useState(-1)
   const toggleNumberOfLines = (index: any) => {
-    settextShown(textShown === index ? -1 : index);
-  };
+    settextShown(textShown === index ? -1 : index)
+  }
 
   const renderItem = ({ item, index }: any) => (
     <Image
@@ -37,11 +37,11 @@ function PopularDetailsScreen({ navigation }: any) {
         index === 0
           ? [styles.propertyDetaileImgs, { marginLeft: 20 }]
           : index === bookPropertySubImgData.length - 1
-            ? [styles.propertyDetaileImgs, { marginRight: 20 }]
-            : [styles.propertyDetaileImgs]
+          ? [styles.propertyDetaileImgs, { marginRight: 20 }]
+          : [styles.propertyDetaileImgs]
       }
     />
-  );
+  )
   const renderStarItem = ({ item }: any) => (
     <Image
       key={item.id}
@@ -49,7 +49,7 @@ function PopularDetailsScreen({ navigation }: any) {
       resizeMode="contain"
       style={styles.propertyDetaileRatingStarImg}
     />
-  );
+  )
   const renderRatingListItem = ({ item }: any) => (
     <View style={styles.ratingCategoryListRow}>
       <Text style={styles.ratingCategoryListHeading}>{item.name}</Text>
@@ -57,7 +57,7 @@ function PopularDetailsScreen({ navigation }: any) {
         <View style={[styles.ratingCategoryFillLine, { width: item.width }]} />
       </View>
     </View>
-  );
+  )
   const renderReviewsListItem = ({ item, index }: any) => (
     <TouchableOpacity style={styles.reviewContent}>
       <View style={styles.reviewUserImgText}>
@@ -79,7 +79,7 @@ function PopularDetailsScreen({ navigation }: any) {
                 data={ratingStarImgData}
                 renderItem={renderStarItem}
                 numColumns={5}
-                keyExtractor={(item) => item.id}
+                keyExtractor={item => item.id}
               />
             </View>
           </View>
@@ -96,7 +96,7 @@ function PopularDetailsScreen({ navigation }: any) {
         {textShown === index ? 'Read Less' : 'Read More'}
       </Text>
     </TouchableOpacity>
-  );
+  )
   return (
     <>
       <Container safeAreaView={false} statusBarColor="transparent">
@@ -135,7 +135,7 @@ function PopularDetailsScreen({ navigation }: any) {
               horizontal
               data={bookPropertySubImgData}
               renderItem={renderItem}
-              keyExtractor={(item) => item.id}
+              keyExtractor={item => item.id}
             />
           </View>
           <View style={styles.propertyDetaileContainer}>
@@ -162,18 +162,20 @@ function PopularDetailsScreen({ navigation }: any) {
                   latitude: 21.187090218083345,
                   longitude: 72.79023272212653,
                   latitudeDelta: 0.0043,
-                  longitudeDelta: 0.0034
+                  longitudeDelta: 0.0034,
                 }}>
                 <Marker
                   draggable
                   coordinate={{
                     latitude: 21.187090218083345,
-                    longitude: 72.79023272212653
+                    longitude: 72.79023272212653,
                   }}
                   title={'Zluck Solutions'}
                   description={'This is an IT Compnay'}
                   image={Images.location}
-                  onDragEnd={(e) => alert(JSON.stringify(e.nativeEvent.coordinate))}
+                  onDragEnd={e =>
+                    alert(JSON.stringify(e.nativeEvent.coordinate))
+                  }
                 />
               </MapView>
             </View>
@@ -190,7 +192,7 @@ function PopularDetailsScreen({ navigation }: any) {
                   data={ratingStarImgData}
                   renderItem={renderStarItem}
                   numColumns={5}
-                  keyExtractor={(item) => item.id}
+                  keyExtractor={item => item.id}
                 />
               </View>
             </View>
@@ -199,7 +201,7 @@ function PopularDetailsScreen({ navigation }: any) {
                 bounces={false}
                 data={ratingCategoryListData}
                 renderItem={renderRatingListItem}
-                keyExtractor={(item) => item.id}
+                keyExtractor={item => item.id}
               />
             </View>
             <CommanHeading
@@ -213,7 +215,7 @@ function PopularDetailsScreen({ navigation }: any) {
               bounces={false}
               data={reviewListData}
               renderItem={renderReviewsListItem}
-              keyExtractor={(item) => item.id}
+              keyExtractor={item => item.id}
             />
           </View>
         </Content>
@@ -230,7 +232,7 @@ function PopularDetailsScreen({ navigation }: any) {
         </View>
       </Container>
     </>
-  );
+  )
 }
 
-export default PopularDetailsScreen;
+export default PopularDetailsScreen

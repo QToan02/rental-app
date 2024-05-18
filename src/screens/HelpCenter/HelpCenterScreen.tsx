@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { Container, Header, Content } from '../../components';
-import { helpCenterArticleList, helpCenterTopicList } from '../../assets/data';
-import SearchInput from '../../components/SearchInput/Index';
-import { navigate } from '../../navigation/ReduxNavigation';
-import CommanBtnScreen from '../../components/CommanBtn';
-import CommanHeading from '../../components/CommanHeading';
-import HelpCenterList from '../../components/HelpCenterList';
-import styles from './Styles/HelpCenterStyle';
+import * as React from 'react'
+import { View, Text } from 'react-native'
+import { Container, Header, Content } from '../../components'
+import { helpCenterArticleList, helpCenterTopicList } from '../../assets/data'
+import SearchInput from '../../components/SearchInput/Index'
+import { navigate } from '../../navigation/ReduxNavigation'
+import CommanBtnScreen from '../../components/CommanBtn'
+import CommanHeading from '../../components/CommanHeading'
+import HelpCenterList from '../../components/HelpCenterList'
+import styles from './Styles/HelpCenterStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function HelpCenterScreen({ navigation }: any) {
@@ -63,7 +63,7 @@ function HelpCenterScreen({ navigation }: any) {
         </Content>
       </Container>
     </>
-  );
+  )
 }
 
-export default HelpCenterScreen;
+export default HelpCenterScreen

@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { Text, View, Image } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import { paymentOptionData } from '../../assets/data';
-import PaymentList from '../../components/PaymentList';
-import CommanHeading from '../../components/CommanHeading';
-import { navigate } from '../../navigation/ReduxNavigation';
-import { Images } from '../../theme';
-import styles from './Styles/MyRentalPropertyStyle';
+import * as React from 'react'
+import { Text, View, Image } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import { paymentOptionData } from '../../assets/data'
+import PaymentList from '../../components/PaymentList'
+import CommanHeading from '../../components/CommanHeading'
+import { navigate } from '../../navigation/ReduxNavigation'
+import { Images } from '../../theme'
+import styles from './Styles/MyRentalPropertyStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 const ChoosPaymentOptionScreen = ({ navigation }: Props) => {
@@ -63,6 +63,6 @@ const ChoosPaymentOptionScreen = ({ navigation }: Props) => {
         </View>
       </Content>
     </Container>
-  );
-};
-export default ChoosPaymentOptionScreen;
+  )
+}
+export default ChoosPaymentOptionScreen

@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { FlatList, TouchableOpacity, Image, View, Text } from 'react-native';
-import styles from './Styles/Index';
+import * as React from 'react'
+import { FlatList, TouchableOpacity, Image, View, Text } from 'react-native'
+import styles from './Styles/Index'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 function PaymentList(props: any) {
   const renderItem = ({ item, index }: any) => (
@@ -25,12 +25,12 @@ function PaymentList(props: any) {
         style={styles.paymentOptionRightArrowImg}
       />
     </TouchableOpacity>
-  );
+  )
   return (
     <>
       <FlatList data={props.data} renderItem={renderItem} bounces={false} />
     </>
-  );
+  )
 }
 
-export default PaymentList;
+export default PaymentList

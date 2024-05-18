@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Text, Image, View } from 'react-native';
-import { Container, Content } from '../../components';
-import CommanBtnScreen from '../../components/CommanBtn/index';
-import { Images } from '../../theme';
-import styles from './Styles/SuccessStyle';
+import * as React from 'react'
+import { Text, Image, View } from 'react-native'
+import { Container, Content } from '../../components'
+import CommanBtnScreen from '../../components/CommanBtn/index'
+import { Images } from '../../theme'
+import styles from './Styles/SuccessStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function SuccessPasswordScreen({ navigation }: any) {
@@ -31,7 +31,7 @@ function SuccessPasswordScreen({ navigation }: any) {
         />
       </Content>
     </Container>
-  );
+  )
 }
 
-export default SuccessPasswordScreen;
+export default SuccessPasswordScreen

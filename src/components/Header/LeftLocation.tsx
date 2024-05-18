@@ -1,11 +1,11 @@
-import React from 'react';
-import { TouchableOpacity, Image, Text } from 'react-native';
-import { Images } from '../../theme';
-import styles from './Styles';
+import React from 'react'
+import { TouchableOpacity, Image, Text } from 'react-native'
+import { Images } from '../../theme'
+import styles from './Styles'
 
 export interface Props {
-  navigation: any;
-  onLocationPress?: any;
+  navigation: any
+  onLocationPress?: any
 }
 
 function LeftLocation({ onLocationPress }: any) {
@@ -14,7 +14,7 @@ function LeftLocation({ onLocationPress }: any) {
       style={styles.leftLocationContent}
       onPress={() => {
         if (onLocationPress) {
-          onLocationPress();
+          onLocationPress()
         }
       }}>
       <Image
@@ -26,7 +26,7 @@ function LeftLocation({ onLocationPress }: any) {
         Add Your Current Location
       </Text>
     </TouchableOpacity>
-  );
+  )
 }
 
-export default LeftLocation;
+export default LeftLocation

@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { View } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import { languageSelectList } from '../../assets/data';
-import RadioButton from '../../components/RadioButton';
-import SearchInput from '../../components/SearchInput/Index';
-import styles from './Styles/EmergencyContactStyle';
+import * as React from 'react'
+import { View } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import { languageSelectList } from '../../assets/data'
+import RadioButton from '../../components/RadioButton'
+import SearchInput from '../../components/SearchInput/Index'
+import styles from './Styles/EmergencyContactStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function SelectLanguageScreen({ navigation }: any) {
@@ -33,7 +33,7 @@ function SelectLanguageScreen({ navigation }: any) {
         </View>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default SelectLanguageScreen;
+export default SelectLanguageScreen

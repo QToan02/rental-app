@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
-import { Container, Content, Header } from '../../components';
-import CommanHeading from '../../components/CommanHeading';
-import CommanBtn from '../../components/CommanBtn';
-import { navigate } from '../../navigation/ReduxNavigation';
-import styles from './Styles/EmergencyContactStyle';
+import * as React from 'react'
+import { Text, View, TouchableOpacity } from 'react-native'
+import { Container, Content, Header } from '../../components'
+import CommanHeading from '../../components/CommanHeading'
+import CommanBtn from '../../components/CommanBtn'
+import { navigate } from '../../navigation/ReduxNavigation'
+import styles from './Styles/EmergencyContactStyle'
 
 export interface Props {
-  navigation: any;
+  navigation: any
 }
 
 function EmergencyContactScreen({ navigation }: any) {
@@ -43,7 +43,7 @@ function EmergencyContactScreen({ navigation }: any) {
         </TouchableOpacity>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default EmergencyContactScreen;
+export default EmergencyContactScreen

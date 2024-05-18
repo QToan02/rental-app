@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { Text, Image, View, TouchableOpacity, FlatList } from 'react-native';
-import { Images } from '../../theme';
-import styles from './Styles/index';
+import * as React from 'react'
+import { useState } from 'react'
+import { Text, Image, View, TouchableOpacity, FlatList } from 'react-native'
+import { Images } from '../../theme'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
-  helpCenterArticleList?: any;
-  helpCenterTopicList?: any;
-  helpCenterList?: any;
-  helpCenterArticleTextImg?: any;
-  helpCenterTopicTextImg?: any;
+  navigation: any
+  helpCenterArticleList?: any
+  helpCenterTopicList?: any
+  helpCenterList?: any
+  helpCenterArticleTextImg?: any
+  helpCenterTopicTextImg?: any
 }
 
 function HelpCenterList({
@@ -18,7 +18,7 @@ function HelpCenterList({
   helpCenterTopicList,
   helpCenterList,
   helpCenterArticleTextImg,
-  helpCenterTopicTextImg
+  helpCenterTopicTextImg,
 }: Props) {
   const renderItem = ({ item }: any) => (
     <TouchableOpacity style={styles.recommendedArticalLinks}>
@@ -45,7 +45,7 @@ function HelpCenterList({
         </>
       )}
     </TouchableOpacity>
-  );
+  )
   return (
     <>
       {helpCenterArticleList && (
@@ -55,7 +55,7 @@ function HelpCenterList({
         <FlatList data={helpCenterList} renderItem={renderItem} />
       )}
     </>
-  );
+  )
 }
 
-export default HelpCenterList;
+export default HelpCenterList

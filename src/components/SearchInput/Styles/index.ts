@@ -1,5 +1,5 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { Colors, Fonts } from '../../../theme';
+import EStyleSheet from 'react-native-extended-stylesheet'
+import { Colors, Fonts } from '../../../theme'
 
 const styles = EStyleSheet.create({
   allInputStyle: {
@@ -15,15 +15,15 @@ const styles = EStyleSheet.create({
     borderWidth: '1rem',
     borderColor: Colors.lightGray,
     ...Fonts.style.normalText,
-    fontSize: Fonts.size.medium
+    fontSize: Fonts.size.medium,
   },
   searchIcon: {
     position: 'absolute',
     top: '13rem',
     right: '17.71rem',
     width: '14rem',
-    height: '14rem'
-  }
-});
+    height: '14rem',
+  },
+})
 
-export default styles;
+export default styles

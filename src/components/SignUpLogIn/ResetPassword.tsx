@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { TextInput, Image, View, TouchableOpacity } from 'react-native';
-import { Images, Colors } from '../../theme';
-import styles from './Styles/index';
+import * as React from 'react'
+import { useState } from 'react'
+import { TextInput, Image, View, TouchableOpacity } from 'react-native'
+import { Images, Colors } from '../../theme'
+import styles from './Styles/index'
 
 export interface Props {
-  navigation: any;
-  Heading?: string;
-  Peregraph?: string;
-  defaultInput?: any;
-  passwordInput?: any;
-  inputStyle?: any;
-  placeholder?: any;
-  type?: any;
-  passwordStyle?: any;
+  navigation: any
+  Heading?: string
+  Peregraph?: string
+  defaultInput?: any
+  passwordInput?: any
+  inputStyle?: any
+  placeholder?: any
+  type?: any
+  passwordStyle?: any
 }
 
 function ResetPasswordScreen({
@@ -21,9 +21,9 @@ function ResetPasswordScreen({
   inputStyle,
   placeholder,
   type,
-  passwordStyle
+  passwordStyle,
 }: Props) {
-  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(true)
   return (
     <>
       {passwordInput && (
@@ -47,7 +47,7 @@ function ResetPasswordScreen({
         </View>
       )}
     </>
-  );
+  )
 }
 
-export default ResetPasswordScreen;
+export default ResetPasswordScreen
