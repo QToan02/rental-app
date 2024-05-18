@@ -1,19 +1,19 @@
 import * as React from 'react';
-import { useRef } from 'react';
-import { TouchableOpacity, Image, Text, View } from 'react-native';
-import { popularDestionationData } from '../../assets/data';
-import { Container, Header, Content } from '../../components';
+import {useRef} from 'react';
+import {TouchableOpacity, Image, Text, View} from 'react-native';
+import {popularDestionationData} from '../../assets/data';
+import {Container, Header, Content} from '../../components';
 import PopularDestionationProparty from '../../components/PopularDestionationProparty';
 import DestionationSlider from '../../components/DestionationSlider';
 import CommanHeading from '../../components/CommanHeading';
 import styles from './Styles/PopularDestionationStyle';
-import { navigate } from '../../navigation/ReduxNavigation';
+import {navigate} from '../../navigation/ReduxNavigation';
 // import RBSheet from 'react-native-raw-bottom-sheet';
 // import Animated from 'react-native-reanimated';
 // import BottomSheet from 'reanimated-bottom-sheet';
 import BottomSheet from '@gorhom/bottom-sheet';
-import { Images } from '../../theme';
-import MapView, { Marker } from 'react-native-maps';
+import {Images} from '../../theme';
+import MapView, {Marker} from 'react-native-maps';
 // import { ScrollView } from 'react-native-gesture-handler';
 // import { Images, Colors } from '../../theme';
 
@@ -21,10 +21,10 @@ export interface Props {
   navigation: any;
 }
 
-function PopularDestionationScreen({ navigation }: any) {
+function PopularDestionationScreen({navigation}: any) {
   const bottomSheetRef = useRef<BottomSheet>(null);
   const [scrollEnabled, setScrollEnabled] = React.useState(false);
-  const snapPoints = React.useMemo(() => ['18%', '50%', '100%']);
+  const snapPoints = React.useMemo(() => ['18%', '50%', '100%'], []);
   const handleSheetChanges = React.useCallback((index: number) => {
     if (index === 2) {
       setScrollEnabled(true);
@@ -52,18 +52,20 @@ function PopularDestionationScreen({ navigation }: any) {
                 latitude: 21.187090218083345,
                 longitude: 72.79023272212653,
                 latitudeDelta: 0.0043,
-                longitudeDelta: 0.0034
+                longitudeDelta: 0.0034,
               }}>
               <Marker
                 draggable
                 coordinate={{
                   latitude: 21.187090218083345,
-                  longitude: 72.79023272212653
+                  longitude: 72.79023272212653,
                 }}
                 title={'Zluck Solutions'}
                 description={'This is an IT Compnay'}
                 image={Images.CurrentLocation}
-                onDragEnd={(e) => alert(JSON.stringify(e.nativeEvent.coordinate))}
+                onDragEnd={e =>
+                  console.error(JSON.stringify(e.nativeEvent.coordinate))
+                }
               />
             </MapView>
           </View>
