@@ -1,23 +1,25 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';
-import { Container, Header, Content } from '../../components';
+import {useState} from 'react';
+import {View, FlatList, Image, Text, TouchableOpacity} from 'react-native';
+import {Container, Header, Content} from '../../components';
 import SearchInput from '../../components/SearchInput/Index';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, {Marker} from 'react-native-maps';
 import CommanHeading from '../../components/CommanHeading';
 import styles from './Styles/CurrentLocationStyle';
-import { Images } from '../../theme';
-import { navigate } from '../../navigation/ReduxNavigation';
-import { suggestionsListData } from '../../assets/data';
+import {Images} from '../../theme';
+import {navigate} from '../../navigation/ReduxNavigation';
+import {suggestionsListData} from '../../assets/data';
+import {StackScreenProps} from '@react-navigation/stack';
+import {StackScreenParams} from '../../navigation/types';
 
-export interface Props {
-  navigation: any;
-  name: string;
-}
+export type CurrentLocationScreenProps = StackScreenProps<
+  StackScreenParams,
+  'CurrentLocation'
+>;
 
-const CurrentLocationScreen = ({ navigation }: Props) => {
+const CurrentLocationScreen = ({navigation}: CurrentLocationScreenProps) => {
   const [input, setInput] = useState('');
-  const renderItem = ({ item }: any) => (
+  const renderItem = ({item}: any) => (
     <TouchableOpacity style={styles.suggestionsList}>
       <Image
         source={item.searchImg}
@@ -62,18 +64,20 @@ const CurrentLocationScreen = ({ navigation }: Props) => {
           latitude: 21.187090218083345,
           longitude: 72.79023272212653,
           latitudeDelta: 0.0043,
-          longitudeDelta: 0.0034
+          longitudeDelta: 0.0034,
         }}>
         <Marker
           draggable
           coordinate={{
             latitude: 21.187090218083345,
-            longitude: 72.79023272212653
+            longitude: 72.79023272212653,
           }}
           title={'Zluck Solutions'}
           description={'This is an IT Compnay'}
           image={Images.CurrentLocation}
-          onDragEnd={(e) => alert(JSON.stringify(e.nativeEvent.coordinate))}
+          onDragEnd={e =>
+            console.error(JSON.stringify(e.nativeEvent.coordinate))
+          }
         />
       </MapView>
     </Container>
