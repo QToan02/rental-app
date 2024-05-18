@@ -18,7 +18,7 @@ function HomeScreen({ navigation }: any) {
     { key: 'house', title: 'House' },
     { key: 'flats', title: 'Flats' },
     { key: 'apartment', title: 'Apartment' },
-    { key: 'villa', title: 'Villa' }
+    { key: 'villa', title: 'Villa' },
   ]);
 
   const renderTabBar = (props: any) => (
@@ -34,50 +34,42 @@ function HomeScreen({ navigation }: any) {
   );
 
   const HouseRoute = () => (
-    <>
-      <HomeHouse
-        navigation={navigate}
-        onCategoryClick={() => navigation.navigate('PopularDetails')}
-        onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
-      />
-    </>
+    <HomeHouse
+      navigation={navigate}
+      onCategoryClick={() => navigation.navigate('PopularDetails')}
+      onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
+    />
   );
 
   const FlatsRoute = () => (
-    <>
-      <HomeHouse
-        navigation={navigate}
-        onCategoryClick={() => navigation.navigate('PopularDetails')}
-        onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
-      />
-    </>
+    <HomeHouse
+      navigation={navigate}
+      onCategoryClick={() => navigation.navigate('PopularDetails')}
+      onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
+    />
   );
 
   const ApartmentRoute = () => (
-    <>
-      <HomeHouse
-        navigation={navigate}
-        onCategoryClick={() => navigation.navigate('PopularDetails')}
-        onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
-      />
-    </>
+    <HomeHouse
+      navigation={navigate}
+      onCategoryClick={() => navigation.navigate('PopularDetails')}
+      onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
+    />
   );
 
   const VillaRoute = () => (
-    <>
-      <HomeHouse
-        navigation={navigate}
-        onCategoryClick={() => navigation.navigate('PopularDetails')}
-        onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
-      />
-    </>
+    <HomeHouse
+      navigation={navigate}
+      onCategoryClick={() => navigation.navigate('PopularDetails')}
+      onMoreBtnPress={() => navigation.navigate('PopularDestionation')}
+    />
   );
 
   const renderScene = SceneMap({
     house: HouseRoute,
     flats: FlatsRoute,
     apartment: ApartmentRoute,
-    villa: VillaRoute
+    villa: VillaRoute,
   });
 
   return (
