@@ -1,10 +1,6 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import AnimatedTabBar, {
-  TabsConfig,
-  BubbleTabBarItemConfig
-} from '@gorhom/animated-tabbar';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/Home/HomeScreen';
 import WishlistScreen from '../screens/Wishlist/WishlistScreen';
 import BookScreen from '../screens/Book/BookScreen';
@@ -45,85 +41,46 @@ import ConfirmPayPropertyScreen from '../screens/PopularDetails/ConfirmPayProper
 import PopularDestionationScreen from '../screens/PopularDestionation/PopularDestionationScreen';
 import ChatDetailsScreen from '../screens/Chat/ChatDetailsScreen';
 import CameraScreen from '../screens/Camera/CameraScreen';
-import { isIphoneX } from '../libs/Utils';
-import { Colors, Fonts } from '../theme';
+import {isIphoneX} from '../libs/Utils';
+import {Colors, Fonts} from '../theme';
 
 import HomeSVG from '../assets/svg/HomeSvg';
 import WishlistSVG from '../assets/svg/WishlistSvg';
 import BookingSVG from '../assets/svg/BookingSvg';
 import MessageSVG from '../assets/svg/MessageSvg';
 
-import { MainTabsParams } from './types';
+import {MainTabsParams, StackScreenParams} from './types';
 
 const Tab = createBottomTabNavigator<MainTabsParams>();
-
-const tabs: TabsConfig<BubbleTabBarItemConfig, MainTabsParams> = {
-  Home: {
-    labelStyle: {
-      color: Colors.white,
-      ...Fonts.style.textInputText
-    },
-    icon: {
-      component: HomeSVG,
-      activeColor: Colors.white,
-      inactiveColor: Colors.darkGray
-    },
-    background: {
-      activeColor: Colors.pink,
-      inactiveColor: Colors.transparent
-    }
-  },
-  Wishlist: {
-    labelStyle: {
-      color: Colors.white,
-      ...Fonts.style.textInputText
-    },
-    icon: {
-      component: WishlistSVG,
-      activeColor: Colors.white,
-      inactiveColor: Colors.darkGray
-    },
-    background: {
-      activeColor: Colors.pink,
-      inactiveColor: Colors.transparent
-    }
-  },
-  Booking: {
-    labelStyle: {
-      color: Colors.white,
-      ...Fonts.style.textInputText
-    },
-    icon: {
-      component: BookingSVG,
-      activeColor: Colors.white,
-      inactiveColor: Colors.darkGray
-    },
-    background: {
-      activeColor: Colors.pink,
-      inactiveColor: Colors.transparent
-    }
-  },
-  Message: {
-    labelStyle: {
-      color: Colors.white,
-      ...Fonts.style.textInputText
-    },
-    icon: {
-      component: MessageSVG,
-      activeColor: Colors.white,
-      inactiveColor: Colors.darkGray
-    },
-    background: {
-      activeColor: Colors.pink,
-      inactiveColor: Colors.transparent
-    }
-  }
-};
 
 const DashboardNavigation = () => {
   return (
     <Tab.Navigator
+      screenOptions={({navigation, route}) => ({
+        tabBarIcon: ({focused, color, size = 20}) => {
+          switch (route.name) {
+            case 'Home':
+              return <HomeSVG size={size} color={color} />;
+            case 'Wishlist':
+              return <WishlistSVG size={size} color={color} />;
+            case 'Booking':
+              return <BookingSVG size={size} color={color} />;
+            case 'Message':
+              return <MessageSVG size={size} color={color} />;
+            default:
+              return <></>;
+          }
+        },
+      })}
       tabBarOptions={{
+        activeTintColor: Colors.white,
+        inactiveTintColor: Colors.darkGray,
+        activeBackgroundColor: Colors.pink,
+        inactiveBackgroundColor: Colors.transparent,
+        labelStyle: {
+          color: Colors.white,
+          ...Fonts.style.textInputText,
+        },
         style: {
           backgroundColor: Colors.white,
           borderTopWidth: 0,
@@ -133,44 +90,36 @@ const DashboardNavigation = () => {
           paddingVertical: 3,
           elevation: 40,
           shadowColor: Colors.boxShadowLighterBlack,
-          shadowOffset: { height: -10 },
+          shadowOffset: {height: -10},
           shadowOpacity: 0.1,
-          shadowRadius: 40
-        }
-      }}
-      tabBar={(props: any) => (
-        <AnimatedTabBar
-          iconSize={20}
-          tabs={tabs}
-          {...props}
-          itemInnerSpace={14}
-        />
-      )}>
+          shadowRadius: 40,
+        },
+      }}>
       <Tab.Screen
         name="Home"
         initialParams={{
-          nextScreen: 'Wishlist'
+          nextScreen: 'Wishlist',
         }}
         component={HomeScreen}
       />
       <Tab.Screen
         name="Wishlist"
         initialParams={{
-          nextScreen: 'Booking'
+          nextScreen: 'Booking',
         }}
         component={WishlistScreen}
       />
       <Tab.Screen
         name="Booking"
         initialParams={{
-          nextScreen: 'Message'
+          nextScreen: 'Message',
         }}
         component={BookScreen}
       />
       <Tab.Screen
         name="Message"
         initialParams={{
-          nextScreen: 'Home'
+          nextScreen: 'Home',
         }}
         component={ChatScreen}
       />
@@ -178,7 +127,7 @@ const DashboardNavigation = () => {
   );
 };
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<StackScreenParams>();
 
 const AppNavigation = () => {
   return (
@@ -187,47 +136,47 @@ const AppNavigation = () => {
       <Stack.Screen
         name="WelCome"
         component={WelcomeScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="Signup"
         component={SignupScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="Login"
         component={LogInScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="ForgotPassword"
         component={ForgotPasswordScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="ResetPassword"
         component={ResetPasswordScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="OtpSignUpNumber"
         component={OtpSignUpNumberScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="OtpForgotPassword"
         component={OtpForgotPasswordScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="SuccessPassword"
         component={SuccessPasswordScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="SuccessNumber"
         component={SuccessNumberScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <Stack.Screen name="Home" component={DashboardNavigation} />
       <Stack.Screen name="Wishlist" component={WishlistScreen} />
@@ -257,7 +206,7 @@ const AppNavigation = () => {
       <Stack.Screen name="ActiveProperty" component={ActivePropertyScreen} />
       <Stack.Screen name="HistoryProperty" component={HistoryPropertyScreen} />
       <Stack.Screen
-        name="ChoosPaymentOption"
+        name="ChoosePaymentOption"
         component={ChoosPaymentOptionScreen}
       />
       <Stack.Screen name="PaymentMathod" component={PaymentMathodScreen} />
