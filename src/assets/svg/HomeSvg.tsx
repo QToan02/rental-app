@@ -1,20 +1,18 @@
 import React from 'react';
-import Svg, { Path, PathProps } from 'react-native-svg';
-import { SVGProps } from './types';
-import Animated from 'react-native-reanimated';
+import Svg, {Path, PathProps} from 'react-native-svg';
+import {SVGProps} from './types';
+import Animated, {AnimatedProps} from 'react-native-reanimated';
 // import { View } from 'react-native';
 
-const AnimatedPath = (Animated.createAnimatedComponent(
-  Path
-) as any) as React.ComponentClass<
-  Animated.AnimateProps<{}, PathProps & { style?: any }>
->;
+const AnimatedPath = Animated.createAnimatedComponent(
+  Path,
+) as any as React.ComponentClass<AnimatedProps<PathProps & {style?: any}>>;
 
 Animated.addWhitelistedNativeProps({
-  stroke: true
+  stroke: true,
 });
 
-const HomeSVG = ({ color }: SVGProps) => {
+const HomeSVG = ({color}: SVGProps) => {
   return (
     <Svg width="20" height="20" viewBox="0 0 20 20">
       <AnimatedPath
